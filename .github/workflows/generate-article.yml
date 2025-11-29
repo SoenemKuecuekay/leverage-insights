@@ -2,13 +2,12 @@ name: Generate Monthly Insight
 
 on:
   schedule:
-    - cron: '0 9 1 * *'  # Jeden 1. des Monats um 9:00 UTC
-  workflow_dispatch:      # Manueller Trigger
+    - cron: '0 9 1 * *'
+  workflow_dispatch:
 
 jobs:
   generate:
     runs-on: ubuntu-latest
-    
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -41,12 +40,16 @@ jobs:
       - name: Send Email Notification
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: smtp.gmail.com
+          server_address: smtp.ionos.de
           server_port: 587
+          secure: false
           username: ${{ secrets.SMTP_USERNAME }}
           password: ${{ secrets.SMTP_PASSWORD }}
           subject: "📝 Neuer LEVERAGE Insight zur Freigabe"
           to: d.kuecuekay@extra-group.com
-          from: LEVERAGE Insights
-          body: "Ein neuer Artikel wurde generiert. Bitte prüfen und freigeben unter: https://github.com/${{ github.repository }}/actions"
+          from: d.kuecuekay@extra-group.com
+          body: |
+            Ein neuer Artikel wurde generiert.
+            
+            Prüfen: https://github.com/${{ github.repository }}/blob/main/data/articles.json
         continue-on-error: true
