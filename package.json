@@ -1,0 +1,20 @@
+{
+  "name": "leverage-insights",
+  "version": "1.0.0",
+  "description": "Automatisierter Insights-Blog für LEVERAGE STRATEGIES",
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/generate-article.js",
+    "approve": "node scripts/approve-article.js --latest",
+    "approve:list": "node scripts/approve-article.js --list",
+    "build": "echo 'Static site - no build needed'"
+  },
+  "dependencies": {
+    "openai": "^4.52.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "LEVERAGE STRATEGIES",
+  "private": true
+}
