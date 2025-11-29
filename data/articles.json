@@ -1,53 +1,70 @@
 {
   "meta": {
     "lastGenerated": "2025-11-29",
-    "totalArticles": 6,
+    "totalArticles": 8,
     "maxArticles": 18,
-    "categories": [
-      "ai",
-      "creator",
-      "hospitality",
-      "strategy",
-      "case-study"
-    ]
+    "categories": ["ai", "creator", "hospitality", "strategy", "case-study"]
   },
   "featured": {
     "id": "featured-ai-enterprise-2025",
     "category": "ai",
     "categoryLabel": "AI & Automation",
     "title": "Claude, Copilot & Co: Wie Enterprise AI 2025 Workflows revolutioniert",
-    "excerpt": "Von Code-Generierung bis Dokumentenanalyse – AI-Assistenten transformieren die Arbeitswelt.",
-    "content": "<p>Die Integration von AI-Assistenten in Unternehmensworkflows hat 2025 einen Wendepunkt erreicht.</p><h2>Der aktuelle Stand der Enterprise AI</h2><p>Claude von Anthropic, Microsoft Copilot und Google Gemini dominieren den Markt.</p>",
+    "excerpt": "Von Code-Generierung bis Dokumentenanalyse – AI-Assistenten transformieren die Arbeitswelt. Wir analysieren, welche Tools wirklich Produktivität steigern.",
+    "content": "<p>Die Integration von AI-Assistenten in Unternehmensworkflows hat 2025 einen Wendepunkt erreicht. Was vor zwei Jahren noch als experimentelle Technologie galt, ist heute fester Bestandteil produktiver Arbeitsumgebungen.</p><h2>Der aktuelle Stand der Enterprise AI</h2><p>Claude von Anthropic, Microsoft Copilot und Google Gemini dominieren den Markt für Enterprise-AI. Jede Plattform hat ihre Stärken: Claude überzeugt bei komplexen Analysen und Code-Generierung, Copilot integriert sich nahtlos in die Microsoft-Welt, und Gemini punktet mit multimodalen Fähigkeiten.</p><h2>Messbare Produktivitätssteigerungen</h2><p>Unsere Analysen zeigen konkrete Verbesserungen:</p><ul><li><strong>60-70% Zeitersparnis</strong> bei Dokumentenerstellung</li><li><strong>40% schnellere</strong> Code Reviews</li><li><strong>Komplexe Datenanalysen</strong> in Minuten statt Stunden</li></ul><h2>Strategische Implementierung</h2><p>Der Schlüssel zum Erfolg liegt nicht in der Technologie selbst, sondern in der strategischen Implementierung. Unternehmen, die AI-Tools erfolgreich einsetzen, beginnen mit klar definierten Use Cases und skalieren schrittweise.</p><blockquote>Die Frage ist nicht mehr ob AI, sondern wie AI strategisch eingesetzt wird, um Wettbewerbsvorteile zu schaffen.</blockquote><p>Für C-Level Entscheider bedeutet dies: Investitionen in AI-Infrastruktur sind keine optionale Innovation mehr, sondern strategische Notwendigkeit.</p>",
     "author": "LEVERAGE Editorial",
     "authorInitials": "LS",
     "authorRole": "Strategy & Insights",
     "date": "2025-11",
     "dateLabel": "November 2025",
     "readTime": "8 Min.",
-    "tags": [
-      "AI",
-      "Enterprise",
-      "Produktivität"
-    ],
+    "tags": ["AI", "Enterprise", "Produktivität", "Workflow Automation"],
     "status": "published"
   },
   "articles": [
+    {
+      "id": "neue-horizonte-creator-economy-2025",
+      "category": "creator",
+      "categoryLabel": "Creator Economy",
+      "title": "Neue Horizonte der Creator Economy: Strategien für nachhaltiges Wachstum",
+      "excerpt": "Wie die Creator Economy durch strategische Partnerschaften und innovative Technologien neues Wachstumspotenzial entfaltet.",
+      "content": "<p>Die Creator Economy hat sich in den vergangenen Jahren zu einem dynamischen und sich schnell entwickelnden Sektor entwickelt. Angetrieben von Plattformen wie YouTube, TikTok und Instagram, haben sich Content-Ersteller zu eigenständigen Marken entwickelt.</p><h2>Der Status Quo der Creator Economy</h2><p>Die Creator Economy wird durch mehrere Trends geprägt, darunter die Demokratisierung von Content-Erstellung und der direkte Zugang zu globalen Zielgruppen. Daten zeigen, dass die Zahl der Content-Ersteller weltweit auf über 50 Millionen Menschen gestiegen ist.</p><h2>Strategische Partnerschaften als Wachstumsmotor</h2><p>Für C-Level-Entscheider und Marketing-Manager ergibt sich die Möglichkeit, durch gezielte Partnerschaften mit Creators ihre Markenreichweite zu steigern. Der entscheidende Vorteil liegt in der Authentizität, die Creators ihrem Publikum bieten können.</p><h2>Technologische Innovationen nutzen</h2><p>Die Integration von AI und Machine Learning in die Content-Erstellung bietet sowohl Creators als auch Marken neue Möglichkeiten. AI-gestützte Tools können dabei helfen, Trends zu identifizieren und Content-Strategien in Echtzeit anzupassen.</p><h2>Nachhaltiges Wachstum durch Monetarisierung</h2><p>Während traditionelle Monetarisierung wie Sponsoring weiterhin relevant ist, eröffnen digitale Produkte und Mitglieder-Communities zusätzliche Einnahmequellen. Creators mit diversifizierten Strategien erzielen eine um 30% höhere Einkommensstabilität.</p>",
+      "author": "LEVERAGE Editorial",
+      "authorInitials": "LS",
+      "date": "2025-11",
+      "dateLabel": "November 2025",
+      "readTime": "5 Min.",
+      "tags": ["Creator Economy", "Content Creation", "Strategic Partnerships"],
+      "status": "published"
+    },
+    {
+      "id": "datengetriebene-entscheidungen-transformation",
+      "category": "case-study",
+      "categoryLabel": "Case Study",
+      "title": "Datengetriebene Entscheidungen: Der Schlüssel zur erfolgreichen Transformation",
+      "excerpt": "Wie datengetriebene Entscheidungsfindung die Grundlage für erfolgreiche Business-Transformationen bildet.",
+      "content": "<p>In der heutigen digitalen Wirtschaft hängt der Erfolg eines Unternehmens zunehmend von seiner Fähigkeit ab, Entscheidungen auf der Grundlage von Daten zu treffen.</p><h2>Die Herausforderung der Datenintegrität</h2><p>Eine der größten Herausforderungen bei der Implementierung einer datengetriebenen Strategie ist die Sicherstellung der Datenintegrität. Unternehmen müssen sicherstellen, dass ihre gesammelten Daten korrekt und zuverlässig sind.</p><h2>Technologien für die Datenverarbeitung</h2><p>Der Einsatz von Big Data Analytics und Machine Learning ermöglicht es Unternehmen, komplexe Datensätze zu analysieren und wertvolle Insights zu gewinnen.</p><h2>Best Practices für die Umsetzung</h2><ul><li><strong>Klare Datenstrategie:</strong> Eine umfassende Datenstrategie, die die Unternehmensziele unterstützt</li><li><strong>Schulung der Mitarbeiter:</strong> Investition in Datenanalyse-Fähigkeiten</li><li><strong>Kollaboration fördern:</strong> Zusammenarbeit zwischen Abteilungen um Daten-Silos zu vermeiden</li></ul><p>Datengetriebene Entscheidungen sind ein unverzichtbarer Bestandteil moderner Unternehmensstrategien.</p>",
+      "author": "T. Berger",
+      "authorInitials": "TB",
+      "date": "2025-11",
+      "dateLabel": "November 2025",
+      "readTime": "5 Min.",
+      "tags": ["Data Analytics", "Business Transformation", "Case Study"],
+      "status": "published"
+    },
     {
       "id": "creator-monetization-2025",
       "category": "creator",
       "categoryLabel": "Creator Economy",
       "title": "Creator Monetarisierung 2025: Jenseits von Sponsorings",
-      "excerpt": "Subscriptions, Digital Products, Community Memberships – die Revenue-Streams erfolgreicher Creator.",
-      "content": "<p>Die Creator Economy hat sich fundamental gewandelt.</p>",
+      "excerpt": "Subscriptions, Digital Products, Community Memberships – die Revenue-Streams erfolgreicher Creator werden immer diversifizierter.",
+      "content": "<p>Die Creator Economy hat sich fundamental gewandelt. Während Sponsorings und Werbeeinnahmen lange die Haupteinnahmequellen waren, setzen erfolgreiche Creator heute auf diversifizierte Revenue-Streams.</p><h2>Die neuen Säulen der Creator-Einnahmen</h2><ul><li><strong>Digital Products:</strong> E-Books, Online-Kurse, Templates und Tools</li><li><strong>Membership Communities:</strong> Exklusive Inhalte und direkter Zugang</li><li><strong>Services:</strong> Consulting, Coaching und Workshops</li><li><strong>Merchandise:</strong> Physische Produkte mit starker Brand-Identität</li></ul><h2>Plattform-Unabhängigkeit als Ziel</h2><p>Smarte Creator bauen eigene Kanäle auf – Newsletter, Websites, Apps – um unabhängig von Algorithmus-Änderungen zu werden.</p><h2>Der Weg zur Professionalisierung</h2><p>Die erfolgreichsten Creator behandeln ihre Aktivitäten wie ein Unternehmen: mit klaren Strukturen, Teams und langfristiger Planung.</p>",
       "author": "M. Krause",
       "authorInitials": "MK",
       "date": "2025-11",
       "dateLabel": "November 2025",
       "readTime": "5 Min.",
-      "tags": [
-        "Creator Economy",
-        "Monetarisierung"
-      ],
+      "tags": ["Creator Economy", "Monetarisierung", "Digital Products"],
       "status": "published"
     },
     {
@@ -55,17 +72,14 @@
       "category": "hospitality",
       "categoryLabel": "Hospitality",
       "title": "Direct Booking Revolution: Wie Hotels OTA-Abhängigkeit reduzieren",
-      "excerpt": "Mit gezielten Landing Pages gewinnen Luxushotels die Kontrolle über ihre Buchungen zurück.",
-      "content": "<p>Die Abhängigkeit von Booking.com kostet Hotels 15-25% Provision pro Buchung.</p>",
+      "excerpt": "Mit gezielten Landing Pages und Performance Marketing gewinnen Luxushotels die Kontrolle über ihre Buchungen zurück.",
+      "content": "<p>Die Abhängigkeit von Booking.com und Expedia kostet Hotels 15-25% Provision pro Buchung. Für ein Luxushotel mit 2 Millionen Euro Jahresumsatz bedeutet das bis zu 500.000 Euro an Provisionen.</p><h2>Die Direct-Booking-Strategie</h2><p>Erfolgreiche Hotels setzen auf einen mehrstufigen Ansatz:</p><ul><li><strong>Conversion-optimierte Landing Pages:</strong> Speziell für Suchintentionen designed</li><li><strong>Retargeting-Kampagnen:</strong> Besucher zurückholen mit personalisierten Angeboten</li><li><strong>Best-Price-Garantie:</strong> Klare Kommunikation der Vorteile der Direktbuchung</li></ul><h2>Technologie als Enabler</h2><p>Moderne Booking Engines, integrierte CRM-Systeme und automatisierte Email-Journeys machen den Unterschied zwischen durchschnittlichen und exzellenten Conversion Rates.</p><h2>Messbare Ergebnisse</h2><p>Hotels, die diese Strategie konsequent umsetzen, erreichen Direct-Booking-Raten von 50-70% – ein dramatischer Unterschied zu den branchenüblichen 20-30%.</p>",
       "author": "LEVERAGE Editorial",
       "authorInitials": "LS",
       "date": "2025-10",
       "dateLabel": "Oktober 2025",
       "readTime": "6 Min.",
-      "tags": [
-        "Hospitality",
-        "Direct Booking"
-      ],
+      "tags": ["Hospitality", "Direct Booking", "Hotels", "Performance Marketing"],
       "status": "published"
     },
     {
@@ -73,17 +87,14 @@
       "category": "strategy",
       "categoryLabel": "Strategy",
       "title": "Digital ROI messen: KPIs die wirklich zählen",
-      "excerpt": "Vanity Metrics vs. Business Impact – ein Framework für aussagekräftige Metriken.",
-      "content": "<p>Viele Unternehmen können den tatsächlichen Business Impact nicht beziffern.</p>",
+      "excerpt": "Vanity Metrics vs. Business Impact – ein Framework für aussagekräftige Digital Marketing Metriken.",
+      "content": "<p>Viele Unternehmen investieren erheblich in digitales Marketing, können aber den tatsächlichen Business Impact nicht beziffern. Likes, Followers und Impressions fühlen sich gut an, sagen aber wenig über den echten Wertbeitrag.</p><h2>Das Problem mit Vanity Metrics</h2><p>Vanity Metrics wie Follower-Zahlen oder Page Views sind leicht zu messen, aber schwer mit Geschäftsergebnissen zu verbinden. Sie können sogar in die Irre führen.</p><h2>KPIs die wirklich zählen</h2><ul><li><strong>Customer Acquisition Cost (CAC):</strong> Was kostet ein neuer Kunde?</li><li><strong>Customer Lifetime Value (CLV):</strong> Was ist ein Kunde langfristig wert?</li><li><strong>Return on Ad Spend (ROAS):</strong> Direkter Umsatz pro Werbe-Euro</li><li><strong>Conversion Rate by Channel:</strong> Welcher Kanal performt am besten?</li></ul><h2>Ein praktisches Framework</h2><p>Beginnen Sie mit der Frage: Welche Geschäftsziele wollen wir erreichen? Dann arbeiten Sie rückwärts zu den Metriken, die diese Ziele abbilden.</p>",
       "author": "T. Berger",
       "authorInitials": "TB",
       "date": "2025-10",
       "dateLabel": "Oktober 2025",
       "readTime": "7 Min.",
-      "tags": [
-        "Digital Strategy",
-        "Analytics"
-      ],
+      "tags": ["Digital Strategy", "Analytics", "ROI", "KPIs"],
       "status": "published"
     },
     {
@@ -91,17 +102,14 @@
       "category": "case-study",
       "categoryLabel": "Case Study",
       "title": "+340% Direct Bookings: Seehotel Leoni Transformation",
-      "excerpt": "Wie eine gezielte Landing Page Strategie die Direct Booking Rate vervierfachte.",
-      "content": "<p>Das Seehotel Leoni stand vor einer klassischen Herausforderung.</p>",
+      "excerpt": "Wie eine gezielte Landing Page Strategie die Direct Booking Rate eines Boutique Hotels vervierfachte.",
+      "content": "<p>Das Seehotel Leoni am Starnberger See stand vor einer klassischen Herausforderung: Über 75% der Buchungen kamen über OTAs, was erhebliche Provisionskosten verursachte.</p><h2>Die Ausgangssituation</h2><p>Das 4-Sterne-Superior Hotel hatte eine veraltete Website ohne Conversion-Optimierung. Die Buchungsstrecke war umständlich, mobile Nutzer sprangen häufig ab.</p><h2>Die Lösung</h2><p>Wir entwickelten eine mehrstufige Direct-Booking-Strategie:</p><ul><li>Neue, conversion-optimierte Landing Pages für jede Zielgruppe</li><li>Vereinfachte Buchungsstrecke mit nur 3 Schritten</li><li>Gezielte Google Ads und Meta Retargeting Kampagnen</li><li>Email-Automation für Warenkorbabbrecher</li></ul><h2>Die Ergebnisse nach 6 Monaten</h2><ul><li><strong>Direct Booking Rate:</strong> 22% → 68%</li><li><strong>Eingesparte Provisionen:</strong> ~€180.000 p.a.</li><li><strong>Website Conversion Rate:</strong> +285%</li></ul><blockquote>Die Investition hat sich bereits im ersten Jahr mehrfach amortisiert.</blockquote>",
       "author": "LEVERAGE Editorial",
       "authorInitials": "LS",
       "date": "2025-09",
       "dateLabel": "September 2025",
       "readTime": "4 Min.",
-      "tags": [
-        "Case Study",
-        "Hospitality"
-      ],
+      "tags": ["Case Study", "Hospitality", "Direct Booking", "Conversion Optimization"],
       "status": "published"
     },
     {
@@ -109,64 +117,17 @@
       "category": "ai",
       "categoryLabel": "AI & Automation",
       "title": "AI-gestützte Content Produktion: Effizienz ohne Qualitätsverlust",
-      "excerpt": "Der strategische Einsatz von generativer AI in Content Workflows.",
-      "content": "<p>AI-Tools können Content-Produktion dramatisch beschleunigen.</p>",
+      "excerpt": "Der strategische Einsatz von generativer AI in Content Workflows – Best Practices und Pitfalls.",
+      "content": "<p>AI-Tools können Content-Produktion dramatisch beschleunigen. Aber der Schlüssel liegt nicht im blinden Einsatz, sondern in der strategischen Integration in bestehende Workflows.</p><h2>Wo AI wirklich hilft</h2><ul><li><strong>Erste Entwürfe:</strong> AI als Startpunkt, nicht als Endprodukt</li><li><strong>Variationen:</strong> Schnelles Erstellen von A/B-Test-Versionen</li><li><strong>SEO-Optimierung:</strong> Keyword-Integration und Meta-Descriptions</li><li><strong>Übersetzungen:</strong> Schnelle Lokalisierung für internationale Märkte</li></ul><h2>Wo menschliche Expertise unverzichtbar bleibt</h2><p>Strategie, Markentonalität, emotionale Nuancen und faktenbasierte Recherche erfordern weiterhin menschliches Urteilsvermögen.</p><h2>Das optimale Setup</h2><p>Die erfolgreichsten Teams nutzen AI für 60-70% der Grundarbeit und investieren die gesparte Zeit in Qualitätssicherung, strategische Planung und kreative Veredelung.</p><h2>ROI der AI-Integration</h2><p>Unternehmen berichten von 40-60% Zeitersparnis bei Content-Produktion – bei gleichbleibender oder sogar verbesserter Qualität durch mehr Zeit für Feinschliff.</p>",
       "author": "J. Weber",
       "authorInitials": "JW",
       "date": "2025-09",
       "dateLabel": "September 2025",
       "readTime": "6 Min.",
-      "tags": [
-        "AI",
-        "Content"
-      ],
+      "tags": ["AI", "Content", "Marketing", "Automation"],
       "status": "published"
     }
   ],
-  "pending": [
-    {
-      "id": "neue-horizonte-der-creator-economy-strat-1764456857351",
-      "category": "creator",
-      "categoryLabel": "Creator Economy",
-      "title": "Neue Horizonte der Creator Economy: Strategien für nachhaltiges Wachstum",
-      "excerpt": "Erforschen Sie, wie die Creator Economy durch strategische Partnerschaften und innovative Technologien neues Wachstumspotenzial entfaltet.",
-      "content": "<p>Die Creator Economy hat sich in den vergangenen Jahren zu einem dynamischen und sich schnell entwickelnden Sektor entwickelt. Angetrieben von Plattformen wie YouTube, TikTok und Instagram, haben sich Content-Ersteller zu eigenständigen Marken entwickelt, die eine direkte Verbindung zu ihrem Publikum aufbauen können. Aber wie können Unternehmen und Marken diese Entwicklung strategisch nutzen, um nachhaltiges Wachstum zu erzielen?</p><h2>Der Status Quo der Creator Economy</h2><p>Die Creator Economy wird durch mehrere Trends geprägt, darunter die Demokratisierung von Content-Erstellung und der direkte Zugang zu globalen Zielgruppen. Daten von Statista zeigen, dass die Zahl der Content-Ersteller bis 2023 weltweit auf über 50 Millionen Menschen gestiegen ist, wobei viele von ihnen hauptberuflich als Creator tätig sind.</p><h2>Strategische Partnerschaften als Wachstumsmotor</h2><p>Für C-Level-Entscheider und Marketing-Manager ergibt sich die Möglichkeit, durch gezielte Partnerschaften mit Creators ihre Markenreichweite zu steigern. Einer der entscheidenden Vorteile liegt in der Authentizität, die Creators ihrem Publikum bieten können. Diese Authentizität, gepaart mit umfassenden Datenanalysen, ermöglicht es Marken, zielgerichtete Kampagnen zu entwickeln, die sowohl die Markenbekanntheit steigern als auch den Umsatz positiv beeinflussen.</p><h2>Technologische Innovationen nutzen</h2><p>Die Integration von Technologien wie AI und Machine Learning in die Content-Erstellung bietet sowohl Creators als auch Marken neue Möglichkeiten. AI-gestützte Tools können dabei helfen, Trends zu identifizieren und Content-Strategien in Echtzeit anzupassen. Dies ermöglicht es Creators, relevanten Content zu liefern, der ihr Publikum anspricht, während Marken von einem höheren Engagement und einer stärkeren Kundenbindung profitieren.</p><h2>Nachhaltiges Wachstum durch Monetarisierung</h2><p>Ein weiterer Schlüssel zum Erfolg in der Creator Economy liegt in der Monetarisierung. Während traditionelle Formen der Monetarisierung wie Sponsoring und Werbung weiterhin eine Rolle spielen, eröffnen neue Wege der Einnahmegenerierung, wie digitale Produkte und Mitglieder-Communities, zusätzliche Einnahmequellen. Laut einer Studie von AdAge erzielen Creators, die diversifizierte Monetarisierungsstrategien nutzen, eine um 30% höhere Einkommensstabilität.</p>",
-      "tags": [
-        "Creator Economy",
-        "Content Creation",
-        "Strategic Partnerships",
-        "Technological Innovation",
-        "Monetization Strategies"
-      ],
-      "readTime": "5 Min.",
-      "author": "LEVERAGE Editorial",
-      "authorInitials": "LS",
-      "date": "2025-11",
-      "dateLabel": "November 2025",
-      "status": "pending",
-      "generatedAt": "2025-11-29T22:54:17.351Z"
-    },
-    {
-      "id": "datengetriebene-entscheidungen-der-schlu-1764455369432",
-      "category": "case-study",
-      "categoryLabel": "Case Study",
-      "title": "Datengetriebene Entscheidungen: Der Schlüssel zur erfolgreichen Transformation",
-      "excerpt": "Erfahren Sie, wie datengetriebene Entscheidungsfindung die Grundlage für erfolgreiche Business-Transformationen bildet und welche Best Practices Sie implementieren sollten.",
-      "content": "<p>In der heutigen digitalen Wirtschaft hängt der Erfolg eines Unternehmens zunehmend von seiner Fähigkeit ab, Entscheidungen auf der Grundlage von Daten zu treffen. Die datengetriebene Entscheidungsfindung bietet Unternehmen die Möglichkeit, präzisere und fundiertere Entscheidungen zu treffen, die zu einer besseren Performance und Effizienz führen.</p><h2>Die Herausforderung der Datenintegrität</h2><p>Eine der größten Herausforderungen bei der Implementierung einer datengetriebenen Strategie ist die Sicherstellung der Datenintegrität. Unternehmen müssen sicherstellen, dass ihre gesammelten Daten korrekt und zuverlässig sind. Dies erfordert den Einsatz fortschrittlicher Data Governance-Frameworks und kontinuierlicher Datenüberprüfungsprozesse.</p><h2>Technologien für die Datenverarbeitung</h2><p>Der Einsatz von Technologien wie Big Data Analytics und Machine Learning ermöglicht es Unternehmen, komplexe Datensätze zu analysieren und wertvolle Insights zu gewinnen. Diese Technologien unterstützen Unternehmen dabei, Trends zu identifizieren und präzise Prognosen zu erstellen, die ihre strategische Planung verbessern.</p><h2>Best Practices für die Umsetzung</h2><p>Für eine erfolgreiche Implementierung datengetriebener Entscheidungsfindung sollten Unternehmen folgende Best Practices berücksichtigen:</p><ul><li><strong>Klare Datenstrategie:</strong> Eine klare und umfassende Datenstrategie, die die Unternehmensziele unterstützt, ist entscheidend.</li><li><strong>Schulung der Mitarbeiter:</strong> Investieren Sie in die Schulung Ihrer Mitarbeiter, um sicherzustellen, dass sie die notwendigen Fähigkeiten für die Datenanalyse besitzen.</li><li><strong>Kollaboration fördern:</strong> Ermutigen Sie die Zusammenarbeit zwischen verschiedenen Abteilungen, um Daten-Silos zu vermeiden und eine umfassendere Perspektive zu gewinnen.</li></ul><h2>Fazit</h2><p>Datengetriebene Entscheidungen sind ein unverzichtbarer Bestandteil moderner Unternehmensstrategien. Sie ermöglichen es Unternehmen, agiler und effizienter zu agieren und sich einen Wettbewerbsvorteil zu verschaffen. Mit den richtigen Technologien und einer soliden Datenstrategie können Unternehmen die Vorteile datengetriebener Entscheidungsfindung ausschöpfen und langfristig wachsen.</p>",
-      "tags": [
-        "Datengetriebene Entscheidungen",
-        "Business-Transformation",
-        "Data Governance",
-        "Big Data Analytics"
-      ],
-      "readTime": "5 Min.",
-      "author": "LEVERAGE Editorial",
-      "authorInitials": "LS",
-      "date": "2025-11",
-      "dateLabel": "November 2025",
-      "status": "pending",
-      "generatedAt": "2025-11-29T22:29:29.432Z"
-    }
-  ],
+  "pending": [],
   "archived": []
 }
