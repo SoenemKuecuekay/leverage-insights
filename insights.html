@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Insights · LEVERAGE STRATEGIES - Digital Intelligence</title>
-<meta name="description" content="Strategische Perspektiven auf AI, Creator Economy und Digital Transformation. Thought Leadership von LEVERAGE STRATEGIES.">
+<title>Insights · LEVERAGE STRATEGIES</title>
+<meta name="description" content="Strategische Perspektiven auf AI, Creator Economy und Digital Transformation.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,49 +21,28 @@
   --cloud: #c4c9d4;
   --ivory: #f4f5f7;
   --pure: #ffffff;
-  
   --accent: #00d4aa;
   --accent-dim: rgba(0, 212, 170, 0.15);
-  --accent-glow: rgba(0, 212, 170, 0.4);
   --gold: #e8c547;
   --coral: #ff6b6b;
   --azure: #4a9eff;
-  
   --serif: 'Instrument Serif', Georgia, serif;
   --sans: 'Satoshi', -apple-system, sans-serif;
-  
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  font-size: 16px;
-}
-
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
   font-family: var(--sans);
   background: var(--void);
   color: var(--ivory);
   line-height: 1.6;
-  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
+::selection { background: var(--accent); color: var(--void); }
 
-::selection {
-  background: var(--accent);
-  color: var(--void);
-}
-
-/* ═══════════════════════════════════════════
-   NAVIGATION
-═══════════════════════════════════════════ */
+/* Navigation */
 .nav {
   position: fixed;
   top: 0;
@@ -76,78 +55,38 @@ body {
   align-items: center;
   transition: all 0.4s var(--ease-out);
 }
-
 .nav.scrolled {
-  background: rgba(8, 9, 12, 0.85);
+  background: rgba(8, 9, 12, 0.9);
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
-
 .nav-logo {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
   color: var(--pure);
+  font-weight: 600;
 }
-
 .nav-logo-mark {
   width: 36px;
   height: 36px;
-  background: linear-gradient(135deg, var(--accent) 0%, #00a888 100%);
+  background: linear-gradient(135deg, var(--accent), #00a888);
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 0.85rem;
   font-weight: 700;
-  font-size: 1rem;
-  color: var(--void);
 }
-
-.nav-logo-text {
-  font-weight: 600;
-  font-size: 1rem;
-  letter-spacing: 0.02em;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
-}
-
+.nav-links { display: flex; align-items: center; gap: 2rem; }
 .nav-link {
-  color: var(--cloud);
+  color: var(--mist);
   text-decoration: none;
   font-size: 0.9rem;
-  font-weight: 500;
-  position: relative;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: var(--accent);
-  transition: width 0.3s var(--ease-out);
-}
-
-.nav-link:hover {
-  color: var(--pure);
-}
-
-.nav-link:hover::after {
-  width: 100%;
-}
-
-.nav-link.active {
-  color: var(--accent);
-}
-
+.nav-link:hover, .nav-link.active { color: var(--pure); }
 .nav-cta {
   padding: 0.65rem 1.5rem;
   background: var(--pure);
@@ -156,1446 +95,470 @@ body {
   font-size: 0.875rem;
   font-weight: 600;
   border-radius: 100px;
-  transition: all 0.3s var(--ease-out);
+  transition: all 0.3s;
 }
-
 .nav-cta:hover {
   background: var(--accent);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px var(--accent-dim);
 }
 
-/* ═══════════════════════════════════════════
-   HERO SECTION - EDITORIAL STYLE
-═══════════════════════════════════════════ */
+/* Hero */
 .hero {
-  min-height: 100vh;
+  min-height: 60vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
   padding: 8rem 3rem 4rem;
   position: relative;
   overflow: hidden;
 }
-
 .hero-bg {
   position: absolute;
   inset: 0;
-  z-index: 0;
+  background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(0,212,170,0.15), transparent 50%);
 }
-
-.hero-gradient-orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(120px);
-  opacity: 0.6;
-  animation: orbFloat 20s ease-in-out infinite;
-}
-
-.hero-gradient-orb.primary {
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
-  top: -250px;
-  right: 5%;
-}
-
-.hero-gradient-orb.secondary {
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, var(--azure) 0%, transparent 70%);
-  bottom: 5%;
-  left: -150px;
-  animation-delay: -10s;
-}
-
-.hero-gradient-orb.tertiary {
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, var(--gold) 0%, transparent 70%);
-  top: 40%;
-  right: 25%;
-  opacity: 0.3;
-  animation-delay: -5s;
-}
-
-@keyframes orbFloat {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(30px, -20px) scale(1.05); }
-  66% { transform: translate(-20px, 30px) scale(0.95); }
-}
-
-.hero-grid-overlay {
-  position: absolute;
-  inset: 0;
-  background-image: 
-    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 80px 80px;
-  mask-image: radial-gradient(ellipse 100% 80% at 50% 20%, black 30%, transparent 70%);
-}
-
-.hero-noise {
-  position: absolute;
-  inset: 0;
-  opacity: 0.4;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
-  pointer-events: none;
-}
-
 .hero-content {
   position: relative;
-  z-index: 1;
-  max-width: 1400px;
+  max-width: 900px;
   margin: 0 auto;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
+  text-align: center;
 }
-
-.hero-text {
-  max-width: 700px;
-}
-
-.hero-visual {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-visual-element {
-  width: 400px;
-  height: 400px;
-  position: relative;
-}
-
-.hero-visual-ring {
-  position: absolute;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 212, 170, 0.2);
-  animation: ringPulse 4s ease-in-out infinite;
-}
-
-.hero-visual-ring:nth-child(1) {
-  inset: 0;
-}
-
-.hero-visual-ring:nth-child(2) {
-  inset: 40px;
-  animation-delay: -1s;
-  border-color: rgba(74, 158, 255, 0.15);
-}
-
-.hero-visual-ring:nth-child(3) {
-  inset: 80px;
-  animation-delay: -2s;
-  border-color: rgba(232, 197, 71, 0.1);
-}
-
-.hero-visual-center {
-  position: absolute;
-  inset: 120px;
-  background: linear-gradient(135deg, rgba(0, 212, 170, 0.1) 0%, rgba(74, 158, 255, 0.05) 100%);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--serif);
-  font-size: 4rem;
-  color: var(--accent);
-  font-style: italic;
-  border: 1px solid rgba(0, 212, 170, 0.2);
-}
-
-@keyframes ringPulse {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.02); opacity: 0.7; }
-}
-
-.hero-floating-cards {
-  position: absolute;
-  inset: -50px;
-  pointer-events: none;
-}
-
-.hero-floating-card {
-  position: absolute;
-  background: rgba(20, 23, 30, 0.8);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  padding: 1rem 1.25rem;
-  font-size: 0.8rem;
-  color: var(--cloud);
-  animation: floatCard 6s ease-in-out infinite;
-}
-
-.hero-floating-card:nth-child(1) {
-  top: 10%;
-  right: -20px;
-  animation-delay: 0s;
-}
-
-.hero-floating-card:nth-child(2) {
-  bottom: 20%;
-  left: -30px;
-  animation-delay: -2s;
-}
-
-.hero-floating-card:nth-child(3) {
-  top: 60%;
-  right: 10%;
-  animation-delay: -4s;
-}
-
-.hero-floating-card-icon {
-  display: inline-block;
-  margin-right: 0.5rem;
-  color: var(--accent);
-}
-
-@keyframes floatCard {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
 .hero-eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  margin-bottom: 2rem;
-  animation: fadeSlideUp 0.8s var(--ease-out) 0.2s both;
-}
-
-.hero-eyebrow-line {
-  width: 40px;
-  height: 1px;
-  background: var(--accent);
-}
-
-.hero-eyebrow-text {
-  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--accent);
+  letter-spacing: 0.1em;
 }
-
 .hero-title {
   font-family: var(--serif);
-  font-size: clamp(3.5rem, 10vw, 8rem);
+  font-size: clamp(3rem, 8vw, 5rem);
   font-weight: 400;
-  line-height: 1;
-  margin-bottom: 2rem;
-  animation: fadeSlideUp 0.8s var(--ease-out) 0.3s both;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
 }
-
-.hero-title-line {
-  display: block;
-  overflow: hidden;
-}
-
 .hero-title em {
+  color: var(--accent);
   font-style: italic;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--azure) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
-
 .hero-subtitle {
-  font-size: 1.25rem;
-  color: var(--mist);
+  font-size: 1.15rem;
+  color: var(--cloud);
   max-width: 600px;
-  line-height: 1.7;
-  margin-bottom: 3rem;
-  animation: fadeSlideUp 0.8s var(--ease-out) 0.4s both;
+  margin: 0 auto 2rem;
 }
-
-@keyframes fadeSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Stats Row */
 .hero-stats {
   display: flex;
-  gap: 4rem;
-  padding-top: 3rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  animation: fadeSlideUp 0.8s var(--ease-out) 0.5s both;
+  justify-content: center;
+  gap: 3rem;
 }
-
-.hero-stat {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
 .hero-stat-value {
-  font-family: var(--serif);
-  font-size: 2.5rem;
-  font-weight: 400;
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
   color: var(--pure);
 }
-
 .hero-stat-label {
   font-size: 0.85rem;
   color: var(--mist);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
-/* ═══════════════════════════════════════════
-   CATEGORY FILTERS
-═══════════════════════════════════════════ */
-.filters-section {
-  padding: 0 3rem;
-  margin-bottom: 4rem;
-}
-
-.filters-container {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.filters-wrapper {
+/* Filters */
+.filters {
+  padding: 2rem 3rem;
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.5rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  overflow-x: auto;
-  scrollbar-width: none;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
-
-.filters-wrapper::-webkit-scrollbar {
-  display: none;
-}
-
 .filter-chip {
   padding: 0.6rem 1.25rem;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 100px;
-  color: var(--cloud);
-  font-family: var(--sans);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--mist);
   font-size: 0.875rem;
-  font-weight: 500;
+  border-radius: 100px;
   cursor: pointer;
-  white-space: nowrap;
-  transition: all 0.3s var(--ease-out);
+  transition: all 0.3s;
 }
-
 .filter-chip:hover {
-  border-color: rgba(255, 255, 255, 0.25);
+  border-color: var(--accent);
   color: var(--pure);
-  transform: translateY(-2px);
 }
-
 .filter-chip.active {
-  background: var(--pure);
-  border-color: var(--pure);
+  background: var(--accent);
+  border-color: var(--accent);
   color: var(--void);
 }
-
-.filters-count {
-  margin-left: auto;
-  font-size: 0.875rem;
-  color: var(--mist);
+.filter-count {
+  margin-left: 0.5rem;
+  opacity: 0.7;
 }
 
-/* ═══════════════════════════════════════════
-   INSIGHTS GRID - MAGAZINE LAYOUT
-═══════════════════════════════════════════ */
-.insights-section {
-  padding: 0 3rem 6rem;
-}
+/* Main Content */
+.main { padding: 4rem 3rem; max-width: 1400px; margin: 0 auto; }
 
-.insights-container {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-/* Featured Article - Full Width */
-.featured-article {
+/* Featured Article */
+.featured {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 4rem;
-  margin-bottom: 5rem;
-  padding-bottom: 5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  align-items: center;
+  margin-bottom: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  cursor: pointer;
 }
-
-.featured-visual {
-  position: relative;
-  aspect-ratio: 4/3;
-  border-radius: 20px;
-  overflow: hidden;
-  background: var(--graphite);
-}
-
 .featured-image {
+  aspect-ratio: 4/3;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+.featured-image-bg {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s var(--ease-out);
+  background: linear-gradient(135deg, var(--graphite), var(--obsidian));
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.featured-visual:hover .featured-image {
-  transform: scale(1.05);
+.featured-image-icon {
+  font-size: 5rem;
+  opacity: 0.2;
 }
-
-.featured-gradient {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, 
-    rgba(0, 212, 170, 0.3) 0%, 
-    rgba(74, 158, 255, 0.2) 50%,
-    rgba(232, 197, 71, 0.1) 100%
-  );
-  mix-blend-mode: overlay;
-}
-
-.featured-pattern {
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-}
-
 .featured-badge {
   position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-  padding: 0.5rem 1rem;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.4rem 0.8rem;
   background: var(--accent);
   color: var(--void);
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   border-radius: 4px;
 }
-
-.featured-content {
-  padding: 2rem 0;
-}
-
+.featured-content { display: flex; flex-direction: column; justify-content: center; }
 .featured-meta {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  color: var(--mist);
 }
-
 .featured-category {
-  font-size: 0.75rem;
+  color: var(--accent);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--accent);
+  letter-spacing: 0.05em;
 }
-
-.featured-date {
-  font-size: 0.85rem;
-  color: var(--mist);
-}
-
-.featured-reading-time {
-  font-size: 0.85rem;
-  color: var(--mist);
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.featured-reading-time::before {
-  content: '';
-  width: 4px;
-  height: 4px;
-  background: var(--mist);
-  border-radius: 50%;
-}
-
 .featured-title {
   font-family: var(--serif);
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 400;
-  line-height: 1.15;
-  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
   color: var(--pure);
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
-
-.featured-article:hover .featured-title {
-  color: var(--accent);
-}
-
+.featured:hover .featured-title { color: var(--accent); }
 .featured-excerpt {
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1.05rem;
   color: var(--cloud);
-  margin-bottom: 2rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
 }
-
 .featured-author {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.75rem;
 }
-
-.featured-author-avatar {
-  width: 48px;
-  height: 48px;
+.featured-avatar {
+  width: 40px;
+  height: 40px;
+  background: var(--accent-dim);
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--azure) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: var(--void);
-}
-
-.featured-author-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
-
-.featured-author-name {
-  font-weight: 600;
-  color: var(--pure);
-}
-
-.featured-author-role {
   font-size: 0.85rem;
-  color: var(--mist);
+  font-weight: 600;
+  color: var(--accent);
 }
+.featured-author-name { font-weight: 500; color: var(--pure); }
+.featured-author-role { font-size: 0.85rem; color: var(--mist); }
 
-/* Article Grid */
+/* Articles Grid */
 .articles-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-
-/* Article Card */
 .article-card {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--graphite);
   border-radius: 16px;
   overflow: hidden;
   cursor: pointer;
-  transition: all 0.4s var(--ease-out);
-  display: flex;
-  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-
 .article-card:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.12);
   transform: translateY(-8px);
-  box-shadow: 
-    0 20px 40px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(0, 212, 170, 0.1);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
-
-.article-card-visual {
-  position: relative;
-  aspect-ratio: 16/10;
-  overflow: hidden;
-}
-
 .article-card-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s var(--ease-out);
+  aspect-ratio: 16/10;
+  background: linear-gradient(135deg, var(--slate), var(--graphite));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
-
-.article-card:hover .article-card-image {
-  transform: scale(1.08);
-}
-
-.article-card-gradient {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 30%, rgba(8, 9, 12, 0.9) 100%);
-}
-
-.article-card-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(0, 212, 170, 0.1) 0%, rgba(74, 158, 255, 0.05) 100%);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.article-card:hover .article-card-overlay {
-  opacity: 1;
-}
-
 .article-card-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3.5rem;
-  opacity: 0.15;
-  transition: all 0.4s ease;
+  font-size: 3rem;
+  opacity: 0.2;
 }
-
-.article-card:hover .article-card-icon {
-  opacity: 0.25;
-  transform: translate(-50%, -50%) scale(1.1);
-}
-
 .article-card-category {
   position: absolute;
   top: 1rem;
   left: 1rem;
   padding: 0.35rem 0.75rem;
-  background: rgba(8, 9, 12, 0.7);
+  background: rgba(0,0,0,0.6);
   backdrop-filter: blur(10px);
-  border-radius: 4px;
+  color: var(--pure);
   font-size: 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--accent);
+  letter-spacing: 0.05em;
+  border-radius: 4px;
 }
-
-.article-card-content {
-  padding: 1.5rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
+.article-card-content { padding: 1.5rem; }
 .article-card-meta {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 0.75rem;
+  gap: 0.75rem;
   font-size: 0.8rem;
   color: var(--mist);
+  margin-bottom: 0.75rem;
 }
-
 .article-card-title {
   font-family: var(--serif);
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.3;
   margin-bottom: 0.75rem;
   color: var(--pure);
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
-
-.article-card:hover .article-card-title {
-  color: var(--accent);
-}
-
+.article-card:hover .article-card-title { color: var(--accent); }
 .article-card-excerpt {
   font-size: 0.9rem;
-  line-height: 1.6;
   color: var(--mist);
-  flex: 1;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }
-
 .article-card-footer {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin-top: 1.25rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
 }
-
 .article-card-author {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
 }
-
 .article-card-avatar {
   width: 28px;
   height: 28px;
+  background: var(--accent-dim);
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--steel) 0%, var(--slate) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   font-weight: 600;
-  color: var(--cloud);
+  color: var(--accent);
 }
+.article-card-author-name { font-size: 0.85rem; color: var(--cloud); }
+.article-card-read-time { font-size: 0.8rem; color: var(--mist); }
 
-.article-card-author-name {
-  font-size: 0.8rem;
-  color: var(--cloud);
-}
-
-.article-card-read-time {
-  font-size: 0.8rem;
-  color: var(--mist);
-}
-
-/* ═══════════════════════════════════════════
-   NEWSLETTER SECTION
-═══════════════════════════════════════════ */
-.newsletter-section {
-  padding: 6rem 3rem;
-  background: var(--obsidian);
-  position: relative;
-  overflow: hidden;
-}
-
-.newsletter-bg-pattern {
-  position: absolute;
+/* Modal */
+.modal {
+  position: fixed;
   inset: 0;
-  background-image: 
-    radial-gradient(circle at 20% 50%, var(--accent-dim) 0%, transparent 50%),
-    radial-gradient(circle at 80% 50%, rgba(74, 158, 255, 0.1) 0%, transparent 50%);
-}
-
-.newsletter-container {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-.newsletter-icon {
-  width: 64px;
-  height: 64px;
-  margin: 0 auto 2rem;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--azure) 100%);
-  border-radius: 16px;
+  z-index: 2000;
+  background: rgba(0,0,0,0.9);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.75rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  padding: 2rem;
+  overflow-y: auto;
 }
-
-.newsletter-title {
-  font-family: var(--serif);
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 400;
-  margin-bottom: 1rem;
-  color: var(--pure);
+.modal.active { opacity: 1; visibility: visible; }
+.modal-content {
+  background: var(--obsidian);
+  border-radius: 20px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  transform: translateY(20px);
+  transition: transform 0.3s;
 }
-
-.newsletter-subtitle {
-  font-size: 1.1rem;
-  color: var(--mist);
-  margin-bottom: 2.5rem;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
+.modal.active .modal-content { transform: translateY(0); }
+.modal-header {
+  padding: 2rem 2rem 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
-
-.newsletter-form {
-  display: flex;
-  gap: 1rem;
-  max-width: 480px;
-  margin: 0 auto;
-}
-
-.newsletter-input {
-  flex: 1;
-  padding: 1rem 1.5rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  color: var(--pure);
-  font-family: var(--sans);
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
-}
-
-.newsletter-input::placeholder {
-  color: var(--mist);
-}
-
-.newsletter-input:focus {
-  outline: none;
-  border-color: var(--accent);
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.newsletter-button {
-  padding: 1rem 2rem;
-  background: var(--accent);
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  background: var(--graphite);
   border: none;
-  border-radius: 12px;
-  color: var(--void);
-  font-family: var(--sans);
-  font-size: 0.95rem;
-  font-weight: 600;
+  border-radius: 50%;
+  color: var(--pure);
+  font-size: 1.25rem;
   cursor: pointer;
-  transition: all 0.3s var(--ease-out);
+  transition: background 0.3s;
 }
-
-.newsletter-button:hover {
-  background: #00e8b8;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px var(--accent-dim);
+.modal-close:hover { background: var(--accent); color: var(--void); }
+.modal-category {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background: var(--accent-dim);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
+  margin-bottom: 1rem;
 }
-
-.newsletter-privacy {
-  margin-top: 1.5rem;
-  font-size: 0.8rem;
-  color: var(--mist);
-}
-
-/* ═══════════════════════════════════════════
-   TOPICS SECTION
-═══════════════════════════════════════════ */
-.topics-section {
-  padding: 6rem 3rem;
-}
-
-.topics-container {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.topics-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.topics-title {
+.modal-title {
   font-family: var(--serif);
   font-size: 2rem;
   font-weight: 400;
-  color: var(--pure);
-}
-
-.topics-subtitle {
-  color: var(--mist);
-  font-size: 0.95rem;
-}
-
-.topics-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-}
-
-.topic-card {
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 16px;
-  cursor: pointer;
-  transition: all 0.4s var(--ease-out);
-  text-decoration: none;
-}
-
-.topic-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: var(--accent);
-  transform: translateY(-4px);
-}
-
-.topic-icon {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 1.25rem;
-  background: var(--accent-dim);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  transition: all 0.3s ease;
-}
-
-.topic-card:hover .topic-icon {
-  background: var(--accent);
-  transform: scale(1.1);
-}
-
-.topic-name {
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: var(--pure);
-  margin-bottom: 0.5rem;
-}
-
-.topic-count {
-  font-size: 0.85rem;
-  color: var(--mist);
-}
-
-/* ═══════════════════════════════════════════
-   FOOTER
-═══════════════════════════════════════════ */
-.footer {
-  padding: 4rem 3rem 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  background: var(--void);
-}
-
-.footer-container {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 4rem;
-  margin-bottom: 4rem;
-}
-
-.footer-brand {
-  max-width: 300px;
-}
-
-.footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1.25rem;
-}
-
-.footer-logo-mark {
-  width: 36px;
-  height: 36px;
-  background: linear-gradient(135deg, var(--accent) 0%, #00a888 100%);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 1rem;
-  color: var(--void);
-}
-
-.footer-logo-text {
-  font-weight: 600;
-  font-size: 1rem;
-  color: var(--pure);
-}
-
-.footer-tagline {
-  color: var(--mist);
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-.footer-column-title {
-  font-weight: 600;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--cloud);
-  margin-bottom: 1.25rem;
-}
-
-.footer-links {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.footer-link {
-  color: var(--mist);
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.3s ease;
-}
-
-.footer-link:hover {
-  color: var(--accent);
-}
-
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.footer-copyright {
-  font-size: 0.85rem;
-  color: var(--mist);
-}
-
-.footer-legal {
-  display: flex;
-  gap: 2rem;
-}
-
-.footer-legal a {
-  color: var(--mist);
-  text-decoration: none;
-  font-size: 0.85rem;
-  transition: color 0.3s ease;
-}
-
-.footer-legal a:hover {
-  color: var(--accent);
-}
-
-/* ═══════════════════════════════════════════
-   RESPONSIVE
-═══════════════════════════════════════════ */
-@media (max-width: 1200px) {
-  .articles-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .topics-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-  }
-}
-
-@media (max-width: 968px) {
-  .nav {
-    padding: 1rem 1.5rem;
-  }
-  
-  .nav-links {
-    display: none;
-  }
-  
-  .hero {
-    padding: 7rem 1.5rem 3rem;
-  }
-  
-  .hero-content {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-  
-  .hero-visual {
-    display: none;
-  }
-  
-  .hero-stats {
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
-  
-  .featured-article {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  .filters-section,
-  .insights-section,
-  .topics-section,
-  .newsletter-section {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.5rem;
-  }
-  
-  .articles-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .topics-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .newsletter-form {
-    flex-direction: column;
-  }
-  
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  .footer-bottom {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-  }
-  
-  .footer-legal {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-
-/* ═══════════════════════════════════════════
-   ANIMATIONS
-═══════════════════════════════════════════ */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Stagger children */
-.stagger-children > * {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.stagger-children.visible > *:nth-child(1) { animation: fadeUp 0.5s var(--ease-out) 0.1s forwards; }
-.stagger-children.visible > *:nth-child(2) { animation: fadeUp 0.5s var(--ease-out) 0.2s forwards; }
-.stagger-children.visible > *:nth-child(3) { animation: fadeUp 0.5s var(--ease-out) 0.3s forwards; }
-.stagger-children.visible > *:nth-child(4) { animation: fadeUp 0.5s var(--ease-out) 0.4s forwards; }
-.stagger-children.visible > *:nth-child(5) { animation: fadeUp 0.5s var(--ease-out) 0.5s forwards; }
-.stagger-children.visible > *:nth-child(6) { animation: fadeUp 0.5s var(--ease-out) 0.6s forwards; }
-.stagger-children.visible > *:nth-child(7) { animation: fadeUp 0.5s var(--ease-out) 0.7s forwards; }
-.stagger-children.visible > *:nth-child(8) { animation: fadeUp 0.5s var(--ease-out) 0.8s forwards; }
-.stagger-children.visible > *:nth-child(9) { animation: fadeUp 0.5s var(--ease-out) 0.9s forwards; }
-.stagger-children.visible > *:nth-child(10) { animation: fadeUp 0.5s var(--ease-out) 1s forwards; }
-.stagger-children.visible > *:nth-child(11) { animation: fadeUp 0.5s var(--ease-out) 1.1s forwards; }
-.stagger-children.visible > *:nth-child(12) { animation: fadeUp 0.5s var(--ease-out) 1.2s forwards; }
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Load More Button */
-.load-more-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 4rem;
-}
-
-.load-more-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 1rem 2.5rem;
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 100px;
-  color: var(--cloud);
-  font-family: var(--sans);
-  font-size: 0.95rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s var(--ease-out);
-}
-
-.load-more-btn:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: var(--accent);
-  color: var(--pure);
-  transform: translateY(-2px);
-}
-
-.load-more-btn svg {
-  transition: transform 0.3s ease;
-}
-
-.load-more-btn:hover svg {
-  transform: translateY(3px);
-}
-
-.load-more-btn.loading {
-  pointer-events: none;
-  opacity: 0.7;
-}
-
-.load-more-btn.done {
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-/* Article Modal */
-.article-modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(8, 9, 12, 0.92);
-  backdrop-filter: blur(20px);
-  z-index: 2000;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.4s var(--ease-out);
-  overflow-y: auto;
-  padding: 2rem;
-}
-
-.article-modal-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-.article-modal {
-  max-width: 900px;
-  margin: 4rem auto;
-  background: var(--obsidian);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 24px;
-  overflow: hidden;
-  transform: translateY(40px) scale(0.95);
-  transition: transform 0.5s var(--ease-out);
-}
-
-.article-modal-overlay.active .article-modal {
-  transform: translateY(0) scale(1);
-}
-
-.article-modal-close {
-  position: fixed;
-  top: 2rem;
-  right: 2rem;
-  width: 48px;
-  height: 48px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  color: var(--pure);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  transition: all 0.3s ease;
-  z-index: 2001;
-}
-
-.article-modal-close:hover {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--void);
-  transform: rotate(90deg);
-}
-
-.article-modal-hero {
-  position: relative;
-  aspect-ratio: 2/1;
-  overflow: hidden;
-}
-
-.article-modal-hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.article-modal-hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 40%, var(--obsidian) 100%);
-}
-
-.article-modal-content {
-  padding: 3rem;
-  margin-top: -4rem;
-  position: relative;
-}
-
-.article-modal-category {
-  display: inline-block;
-  padding: 0.4rem 1rem;
-  background: var(--accent);
-  color: var(--void);
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  border-radius: 4px;
-  margin-bottom: 1.5rem;
-}
-
-.article-modal-title {
-  font-family: var(--serif);
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  font-weight: 400;
   line-height: 1.2;
-  color: var(--pure);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
-
-.article-modal-meta {
+.modal-meta {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: var(--mist);
 }
-
-.article-modal-author {
+.modal-author {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
-
-.article-modal-author-avatar {
-  width: 40px;
-  height: 40px;
+.modal-avatar {
+  width: 32px;
+  height: 32px;
+  background: var(--accent-dim);
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--azure) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 0.75rem;
   font-weight: 600;
-  font-size: 0.85rem;
-  color: var(--void);
+  color: var(--accent);
 }
-
-.article-modal-author-name {
-  font-weight: 600;
-  color: var(--pure);
-}
-
-.article-modal-date,
-.article-modal-reading-time {
-  color: var(--mist);
-  font-size: 0.9rem;
-}
-
-.article-modal-body {
-  font-size: 1.1rem;
+.modal-body {
+  padding: 2rem;
+  font-size: 1.05rem;
   line-height: 1.8;
   color: var(--cloud);
 }
-
-.article-modal-body p {
-  margin-bottom: 1.5rem;
-}
-
-.article-modal-body h2 {
+.modal-body h2 {
   font-family: var(--serif);
   font-size: 1.5rem;
-  font-weight: 400;
   color: var(--pure);
-  margin: 2.5rem 0 1rem;
+  margin: 2rem 0 1rem;
 }
-
-.article-modal-body ul {
+.modal-body p { margin-bottom: 1rem; }
+.modal-body ul, .modal-body ol {
+  margin: 1rem 0 1rem 1.5rem;
+}
+.modal-body li { margin-bottom: 0.5rem; }
+.modal-body li::marker { color: var(--accent); }
+.modal-body blockquote {
   margin: 1.5rem 0;
-  padding-left: 1.5rem;
-}
-
-.article-modal-body li {
-  margin-bottom: 0.75rem;
-  position: relative;
-}
-
-.article-modal-body li::marker {
-  color: var(--accent);
-}
-
-.article-modal-body blockquote {
-  margin: 2rem 0;
-  padding: 1.5rem 2rem;
-  background: rgba(0, 212, 170, 0.05);
+  padding: 1rem 1.5rem;
+  background: var(--accent-dim);
   border-left: 3px solid var(--accent);
-  border-radius: 0 12px 12px 0;
+  border-radius: 0 8px 8px 0;
   font-style: italic;
   color: var(--ivory);
 }
-
-.article-modal-body strong {
-  color: var(--pure);
-  font-weight: 600;
-}
-
-.article-modal-tags {
+.modal-body strong { color: var(--pure); }
+.modal-tags {
+  padding: 1.5rem 2rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
   display: flex;
-  gap: 0.75rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
-
-.article-modal-tag {
-  padding: 0.4rem 1rem;
-  background: rgba(255, 255, 255, 0.05);
+.modal-tag {
+  padding: 0.35rem 0.75rem;
+  background: rgba(255,255,255,0.05);
   border-radius: 100px;
   font-size: 0.8rem;
   color: var(--mist);
 }
 
-.article-modal-cta {
-  margin-top: 3rem;
-  padding: 2rem;
-  background: linear-gradient(135deg, var(--accent-dim) 0%, rgba(74, 158, 255, 0.1) 100%);
-  border-radius: 16px;
+/* Loading State */
+.loading {
   text-align: center;
-}
-
-.article-modal-cta-title {
-  font-family: var(--serif);
-  font-size: 1.25rem;
-  color: var(--pure);
-  margin-bottom: 0.5rem;
-}
-
-.article-modal-cta-text {
+  padding: 4rem;
   color: var(--mist);
-  font-size: 0.95rem;
-  margin-bottom: 1.5rem;
 }
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--graphite);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
 
-.article-modal-cta-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.875rem 2rem;
-  background: var(--accent);
-  color: var(--void);
-  text-decoration: none;
-  font-weight: 600;
+/* Footer */
+.footer {
+  padding: 4rem 3rem 2rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  text-align: center;
+  color: var(--mist);
   font-size: 0.9rem;
-  border-radius: 100px;
-  transition: all 0.3s var(--ease-out);
 }
 
-.article-modal-cta-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px var(--accent-dim);
+/* Responsive */
+@media (max-width: 1024px) {
+  .articles-grid { grid-template-columns: repeat(2, 1fr); }
+  .featured { grid-template-columns: 1fr; gap: 2rem; }
 }
-
-/* Body scroll lock when modal open */
-body.modal-open {
-  overflow: hidden;
+@media (max-width: 768px) {
+  .nav { padding: 1rem 1.5rem; }
+  .nav-links { display: none; }
+  .hero, .main, .filters { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .hero-stats { gap: 2rem; }
+  .articles-grid { grid-template-columns: 1fr; }
+  .modal { padding: 1rem; }
+  .modal-content { border-radius: 12px; }
 }
 </style>
 </head>
@@ -1605,1312 +568,312 @@ body.modal-open {
 <nav class="nav">
   <a href="/" class="nav-logo">
     <div class="nav-logo-mark">LS</div>
-    <span class="nav-logo-text">LEVERAGE STRATEGIES</span>
+    <span>LEVERAGE STRATEGIES</span>
   </a>
-  
   <div class="nav-links">
     <a href="/" class="nav-link">Home</a>
     <a href="/services" class="nav-link">Services</a>
     <a href="/work" class="nav-link">Work</a>
     <a href="/insights" class="nav-link active">Insights</a>
-    <a href="/about" class="nav-link">About</a>
     <a href="/contact" class="nav-cta">Let's Talk</a>
   </div>
 </nav>
 
-<!-- Hero Section -->
+<!-- Hero -->
 <section class="hero">
-  <div class="hero-bg">
-    <div class="hero-gradient-orb primary"></div>
-    <div class="hero-gradient-orb secondary"></div>
-    <div class="hero-gradient-orb tertiary"></div>
-    <div class="hero-grid-overlay"></div>
-    <div class="hero-noise"></div>
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">— Digital Intelligence Hub</div>
+    <h1 class="hero-title">Strategic <em>Insights</em></h1>
+    <p class="hero-subtitle">
+      Perspektiven auf AI, Creator Economy und digitale Transformation. 
+      Analysen und strategische Einblicke für Entscheider.
+    </p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-value" id="total-articles">—</span>
+        <span class="hero-stat-label">Artikel</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-value">12k+</span>
+        <span class="hero-stat-label">Leser/Monat</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-value">5</span>
+        <span class="hero-stat-label">Kategorien</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Filters -->
+<div class="filters" id="filters">
+  <button class="filter-chip active" data-filter="all">Alle<span class="filter-count" id="count-all"></span></button>
+  <button class="filter-chip" data-filter="ai">AI & Automation<span class="filter-count" id="count-ai"></span></button>
+  <button class="filter-chip" data-filter="creator">Creator Economy<span class="filter-count" id="count-creator"></span></button>
+  <button class="filter-chip" data-filter="hospitality">Hospitality<span class="filter-count" id="count-hospitality"></span></button>
+  <button class="filter-chip" data-filter="strategy">Strategy<span class="filter-count" id="count-strategy"></span></button>
+  <button class="filter-chip" data-filter="case-study">Case Studies<span class="filter-count" id="count-case-study"></span></button>
+</div>
+
+<!-- Main Content -->
+<main class="main">
+  <!-- Loading State -->
+  <div class="loading" id="loading">
+    <div class="loading-spinner"></div>
+    <p>Artikel werden geladen...</p>
   </div>
   
-  <div class="hero-content">
-    <div class="hero-text">
-      <div class="hero-eyebrow">
-        <span class="hero-eyebrow-line"></span>
-        <span class="hero-eyebrow-text">Digital Intelligence Hub</span>
-      </div>
-      
-      <h1 class="hero-title">
-        <span class="hero-title-line">Strategic</span>
-        <span class="hero-title-line"><em>Insights</em></span>
-      </h1>
-      
-      <p class="hero-subtitle">
-        Perspektiven auf AI, Creator Economy und digitale Transformation. 
-        Analysen, Trends und strategische Einblicke für Entscheider.
-      </p>
-      
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <span class="hero-stat-value">47</span>
-          <span class="hero-stat-label">Artikel</span>
-        </div>
-        <div class="hero-stat">
-          <span class="hero-stat-value">12k+</span>
-          <span class="hero-stat-label">Leser/Monat</span>
-        </div>
-        <div class="hero-stat">
-          <span class="hero-stat-value">6</span>
-          <span class="hero-stat-label">Fokusthemen</span>
-        </div>
-      </div>
-    </div>
-    
-    <div class="hero-visual">
-      <div class="hero-visual-element">
-        <div class="hero-visual-ring"></div>
-        <div class="hero-visual-ring"></div>
-        <div class="hero-visual-ring"></div>
-        <div class="hero-visual-center">LS</div>
-        <div class="hero-floating-cards">
-          <div class="hero-floating-card">
-            <span class="hero-floating-card-icon">◈</span>
-            AI Strategy
-          </div>
-          <div class="hero-floating-card">
-            <span class="hero-floating-card-icon">✦</span>
-            Creator Economy
-          </div>
-          <div class="hero-floating-card">
-            <span class="hero-floating-card-icon">⌂</span>
-            Hospitality Tech
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- Featured Article -->
+  <article class="featured" id="featured" style="display: none;"></article>
+  
+  <!-- Articles Grid -->
+  <div class="articles-grid" id="articles-grid"></div>
+</main>
 
-<!-- Category Filters -->
-<section class="filters-section">
-  <div class="filters-container">
-    <div class="filters-wrapper">
-      <button class="filter-chip active" data-filter="all">Alle Beiträge</button>
-      <button class="filter-chip" data-filter="ai">AI & Automation</button>
-      <button class="filter-chip" data-filter="creator">Creator Economy</button>
-      <button class="filter-chip" data-filter="strategy">Digital Strategy</button>
-      <button class="filter-chip" data-filter="hospitality">Hospitality Tech</button>
-      <button class="filter-chip" data-filter="case-study">Case Studies</button>
-      <span class="filters-count"><span id="article-count">9</span> Beiträge</span>
-    </div>
-  </div>
-</section>
-
-<!-- Insights Content -->
-<section class="insights-section">
-  <div class="insights-container">
-    
-    <!-- Featured Article -->
-    <article class="featured-article fade-in" data-category="ai">
-      <div class="featured-visual">
-        <div class="featured-gradient"></div>
-        <div class="featured-pattern"></div>
-        <div class="featured-badge">Featured</div>
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='fbg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%231a1d24'/%3E%3Cstop offset='100%25' stop-color='%230d0f14'/%3E%3C/linearGradient%3E%3ClinearGradient id='fg1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300d4aa' stop-opacity='0.4'/%3E%3Cstop offset='50%25' stop-color='%234a9eff' stop-opacity='0.2'/%3E%3Cstop offset='100%25' stop-color='%23e8c547' stop-opacity='0.1'/%3E%3C/linearGradient%3E%3Cpattern id='fp1' width='60' height='60' patternUnits='userSpaceOnUse'%3E%3Cpath d='M30 0v60M0 30h60' stroke='%23ffffff' stroke-opacity='0.03' fill='none'/%3E%3Ccircle cx='30' cy='30' r='2' fill='%23ffffff' fill-opacity='0.05'/%3E%3C/pattern%3E%3CradialGradient id='forb1' cx='80%25' cy='20%25' r='50%25'%3E%3Cstop offset='0%25' stop-color='%2300d4aa' stop-opacity='0.3'/%3E%3Cstop offset='100%25' stop-color='%2300d4aa' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='forb2' cx='20%25' cy='80%25' r='40%25'%3E%3Cstop offset='0%25' stop-color='%234a9eff' stop-opacity='0.2'/%3E%3Cstop offset='100%25' stop-color='%234a9eff' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23fbg)' width='800' height='600'/%3E%3Crect fill='url(%23fg1)' width='800' height='600'/%3E%3Crect fill='url(%23fp1)' width='800' height='600'/%3E%3Crect fill='url(%23forb1)' width='800' height='600'/%3E%3Crect fill='url(%23forb2)' width='800' height='600'/%3E%3Ccircle cx='600' cy='150' r='120' fill='none' stroke='%2300d4aa' stroke-opacity='0.15' stroke-width='1'/%3E%3Ccircle cx='600' cy='150' r='80' fill='none' stroke='%2300d4aa' stroke-opacity='0.1' stroke-width='1'/%3E%3Ccircle cx='200' cy='450' r='100' fill='none' stroke='%234a9eff' stroke-opacity='0.1' stroke-width='1'/%3E%3Crect x='100' y='200' width='150' height='100' rx='12' fill='%2300d4aa' fill-opacity='0.08' stroke='%2300d4aa' stroke-opacity='0.15'/%3E%3Crect x='550' y='350' width='180' height='120' rx='12' fill='%234a9eff' fill-opacity='0.06' stroke='%234a9eff' stroke-opacity='0.12'/%3E%3Ctext x='400' y='320' text-anchor='middle' fill='%2300d4aa' fill-opacity='0.25' font-size='140' font-family='Georgia,serif' font-style='italic'%3EAI%3C/text%3E%3C/svg%3E" 
-             alt="AI Enterprise Integration" class="featured-image">
-      </div>
-      <div class="featured-content">
-        <div class="featured-meta">
-          <span class="featured-category">AI & Automation</span>
-          <span class="featured-date">November 2025</span>
-          <span class="featured-reading-time">8 Min. Lesezeit</span>
+<!-- Modal -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <button class="modal-close" id="modal-close">×</button>
+    <div class="modal-header">
+      <span class="modal-category" id="modal-category"></span>
+      <h2 class="modal-title" id="modal-title"></h2>
+      <div class="modal-meta">
+        <div class="modal-author">
+          <div class="modal-avatar" id="modal-avatar"></div>
+          <span id="modal-author"></span>
         </div>
-        <h2 class="featured-title">
-          Claude, Copilot & Co: Wie Enterprise AI 2025 Workflows revolutioniert
-        </h2>
-        <p class="featured-excerpt">
-          Von Code-Generierung bis Dokumentenanalyse – AI-Assistenten transformieren die Arbeitswelt. 
-          Wir analysieren, welche Tools wirklich Produktivität steigern und wie Unternehmen sie 
-          strategisch einsetzen sollten.
-        </p>
-        <div class="featured-author">
-          <div class="featured-author-avatar">LS</div>
-          <div class="featured-author-info">
-            <span class="featured-author-name">LEVERAGE Editorial</span>
-            <span class="featured-author-role">Strategy & Insights</span>
-          </div>
-        </div>
-      </div>
-    </article>
-    
-    <!-- Articles Grid -->
-    <div class="articles-grid stagger-children">
-      
-      <article class="article-card" data-category="creator">
-        <div class="article-card-visual">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250' viewBox='0 0 400 250'%3E%3Cdefs%3E%3ClinearGradient id='bg1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%231a1d24'/%3E%3Cstop offset='100%25' stop-color='%230d0f14'/%3E%3C/linearGradient%3E%3ClinearGradient id='g1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23e8c547' stop-opacity='0.4'/%3E%3Cstop offset='50%25' stop-color='%23ff6b6b' stop-opacity='0.2'/%3E%3Cstop offset='100%25' stop-color='%23e8c547' stop-opacity='0.1'/%3E%3C/linearGradient%3E%3Cpattern id='p1' width='30' height='30' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='15' cy='15' r='1' fill='%23ffffff' fill-opacity='0.05'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23bg1)' width='400' height='250'/%3E%3Crect fill='url(%23g1)' width='400' height='250'/%3E%3Crect fill='url(%23p1)' width='400' height='250'/%3E%3Ccircle cx='320' cy='60' r='80' fill='%23e8c547' fill-opacity='0.08'/%3E%3Ccircle cx='80' cy='200' r='60' fill='%23ff6b6b' fill-opacity='0.06'/%3E%3Ctext x='200' y='135' text-anchor='middle' fill='%23e8c547' fill-opacity='0.3' font-size='64' font-family='Georgia,serif'%3E✦%3C/text%3E%3C/svg%3E" 
-               alt="Creator Economy" class="article-card-image">
-          <div class="article-card-gradient"></div>
-          <div class="article-card-overlay"></div>
-          <span class="article-card-category">Creator Economy</span>
-        </div>
-        <div class="article-card-content">
-          <div class="article-card-meta">
-            <span>November 2025</span>
-            <span>·</span>
-            <span>5 Min.</span>
-          </div>
-          <h3 class="article-card-title">
-            Creator Monetarisierung 2025: Jenseits von Sponsorings
-          </h3>
-          <p class="article-card-excerpt">
-            Subscriptions, Digital Products, Community Memberships – die Revenue-Streams 
-            erfolgreicher Creator werden immer diversifizierter.
-          </p>
-          <div class="article-card-footer">
-            <div class="article-card-author">
-              <div class="article-card-avatar">MK</div>
-              <span class="article-card-author-name">M. Krause</span>
-            </div>
-            <span class="article-card-read-time">5 Min.</span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="article-card" data-category="hospitality">
-        <div class="article-card-visual">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250' viewBox='0 0 400 250'%3E%3Cdefs%3E%3ClinearGradient id='bg2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%231a1d24'/%3E%3Cstop offset='100%25' stop-color='%230d0f14'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300d4aa' stop-opacity='0.35'/%3E%3Cstop offset='50%25' stop-color='%234a9eff' stop-opacity='0.15'/%3E%3Cstop offset='100%25' stop-color='%2300d4aa' stop-opacity='0.05'/%3E%3C/linearGradient%3E%3Cpattern id='p2' width='40' height='40' patternUnits='userSpaceOnUse'%3E%3Cpath d='M0 20h40M20 0v40' stroke='%23ffffff' stroke-opacity='0.03' fill='none'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23bg2)' width='400' height='250'/%3E%3Crect fill='url(%23g2)' width='400' height='250'/%3E%3Crect fill='url(%23p2)' width='400' height='250'/%3E%3Crect x='280' y='30' width='100' height='60' rx='8' fill='%2300d4aa' fill-opacity='0.1' stroke='%2300d4aa' stroke-opacity='0.2'/%3E%3Crect x='20' y='160' width='80' height='50' rx='6' fill='%234a9eff' fill-opacity='0.08' stroke='%234a9eff' stroke-opacity='0.15'/%3E%3Ctext x='200' y='135' text-anchor='middle' fill='%2300d4aa' fill-opacity='0.35' font-size='64' font-family='Georgia,serif'%3E⌂%3C/text%3E%3C/svg%3E" 
-               alt="Hospitality Tech" class="article-card-image">
-          <div class="article-card-gradient"></div>
-          <div class="article-card-overlay"></div>
-          <span class="article-card-category">Hospitality</span>
-        </div>
-        <div class="article-card-content">
-          <div class="article-card-meta">
-            <span>Oktober 2025</span>
-            <span>·</span>
-            <span>6 Min.</span>
-          </div>
-          <h3 class="article-card-title">
-            Direct Booking Revolution: Wie Hotels OTA-Abhängigkeit reduzieren
-          </h3>
-          <p class="article-card-excerpt">
-            Mit gezielten Landing Pages und Performance Marketing gewinnen 
-            Luxushotels die Kontrolle über ihre Buchungen zurück.
-          </p>
-          <div class="article-card-footer">
-            <div class="article-card-author">
-              <div class="article-card-avatar">LS</div>
-              <span class="article-card-author-name">LS Editorial</span>
-            </div>
-            <span class="article-card-read-time">6 Min.</span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="article-card" data-category="strategy">
-        <div class="article-card-visual">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250' viewBox='0 0 400 250'%3E%3Cdefs%3E%3ClinearGradient id='bg3' x1='0%25' y1='100%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%231a1d24'/%3E%3Cstop offset='100%25' stop-color='%230d0f14'/%3E%3C/linearGradient%3E%3ClinearGradient id='g3' x1='0%25' y1='100%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%234a9eff' stop-opacity='0.35'/%3E%3Cstop offset='50%25' stop-color='%2300d4aa' stop-opacity='0.15'/%3E%3Cstop offset='100%25' stop-color='%234a9eff' stop-opacity='0.05'/%3E%3C/linearGradient%3E%3Cpattern id='p3' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Crect x='9' y='9' width='2' height='2' fill='%23ffffff' fill-opacity='0.04'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23bg3)' width='400' height='250'/%3E%3Crect fill='url(%23g3)' width='400' height='250'/%3E%3Crect fill='url(%23p3)' width='400' height='250'/%3E%3Cpath d='M50 200 L150 100 L250 150 L350 50' stroke='%234a9eff' stroke-opacity='0.3' stroke-width='2' fill='none'/%3E%3Ccircle cx='150' cy='100' r='6' fill='%234a9eff' fill-opacity='0.5'/%3E%3Ccircle cx='250' cy='150' r='6' fill='%2300d4aa' fill-opacity='0.5'/%3E%3Ccircle cx='350' cy='50' r='6' fill='%234a9eff' fill-opacity='0.5'/%3E%3Ctext x='200' y='145' text-anchor='middle' fill='%234a9eff' fill-opacity='0.3' font-size='64' font-family='Georgia,serif'%3E◈%3C/text%3E%3C/svg%3E" 
-               alt="Digital Strategy" class="article-card-image">
-          <div class="article-card-gradient"></div>
-          <div class="article-card-overlay"></div>
-          <span class="article-card-category">Strategy</span>
-        </div>
-        <div class="article-card-content">
-          <div class="article-card-meta">
-            <span>Oktober 2025</span>
-            <span>·</span>
-            <span>7 Min.</span>
-          </div>
-          <h3 class="article-card-title">
-            Digital ROI messen: KPIs die wirklich zählen
-          </h3>
-          <p class="article-card-excerpt">
-            Vanity Metrics vs. Business Impact – ein Framework für 
-            aussagekräftige Digital Marketing Metriken.
-          </p>
-          <div class="article-card-footer">
-            <div class="article-card-author">
-              <div class="article-card-avatar">TB</div>
-              <span class="article-card-author-name">T. Berger</span>
-            </div>
-            <span class="article-card-read-time">7 Min.</span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="article-card" data-category="case-study">
-        <div class="article-card-visual">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250' viewBox='0 0 400 250'%3E%3Crect fill='%231c2029'/%3E%3Cdefs%3E%3ClinearGradient id='e' x1='0' x2='1' y1='0' y2='0'%3E%3Cstop offset='0' stop-color='%2300d4aa' stop-opacity='0.25'/%3E%3Cstop offset='1' stop-color='%2300d4aa' stop-opacity='0.05'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23e)' width='400' height='250'/%3E%3Ctext x='200' y='130' text-anchor='middle' fill='%23ffffff' fill-opacity='0.12' font-size='48' font-family='serif'%3E↗%3C/text%3E%3C/svg%3E" 
-               alt="" class="article-card-image">
-          <div class="article-card-gradient"></div>
-          <span class="article-card-category">Case Study</span>
-        </div>
-        <div class="article-card-content">
-          <div class="article-card-meta">
-            <span>September 2025</span>
-            <span>·</span>
-            <span>4 Min.</span>
-          </div>
-          <h3 class="article-card-title">
-            +340% Direct Bookings: Seehotel Leoni Transformation
-          </h3>
-          <p class="article-card-excerpt">
-            Wie eine gezielte Landing Page Strategie die Direct Booking Rate 
-            eines Boutique Hotels am Starnberger See vervierfachte.
-          </p>
-          <div class="article-card-footer">
-            <div class="article-card-author">
-              <div class="article-card-avatar">LS</div>
-              <span class="article-card-author-name">LS Editorial</span>
-            </div>
-            <span class="article-card-read-time">4 Min.</span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="article-card" data-category="ai">
-        <div class="article-card-visual">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250' viewBox='0 0 400 250'%3E%3Crect fill='%231c2029'/%3E%3Cdefs%3E%3ClinearGradient id='f' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23ff6b6b' stop-opacity='0.15'/%3E%3Cstop offset='1' stop-color='%234a9eff' stop-opacity='0.1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23f)' width='400' height='250'/%3E%3Ctext x='200' y='130' text-anchor='middle' fill='%23ffffff' fill-opacity='0.12' font-size='48' font-family='serif'%3E⚡%3C/text%3E%3C/svg%3E" 
-               alt="" class="article-card-image">
-          <div class="article-card-gradient"></div>
-          <span class="article-card-category">AI & Automation</span>
-        </div>
-        <div class="article-card-content">
-          <div class="article-card-meta">
-            <span>September 2025</span>
-            <span>·</span>
-            <span>6 Min.</span>
-          </div>
-          <h3 class="article-card-title">
-            AI-gestützte Content Produktion: Effizienz ohne Qualitätsverlust
-          </h3>
-          <p class="article-card-excerpt">
-            Der strategische Einsatz von generativer AI in Content Workflows – 
-            Best Practices und Pitfalls.
-          </p>
-          <div class="article-card-footer">
-            <div class="article-card-author">
-              <div class="article-card-avatar">JW</div>
-              <span class="article-card-author-name">J. Weber</span>
-            </div>
-            <span class="article-card-read-time">6 Min.</span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="article-card" data-category="creator">
-        <div class="article-card-visual">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250' viewBox='0 0 400 250'%3E%3Crect fill='%231c2029'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='1' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23e8c547' stop-opacity='0.2'/%3E%3Cstop offset='1' stop-color='%2300d4aa' stop-opacity='0.1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23g)' width='400' height='250'/%3E%3Ctext x='200' y='130' text-anchor='middle' fill='%23ffffff' fill-opacity='0.12' font-size='48' font-family='serif'%3E♦%3C/text%3E%3C/svg%3E" 
-               alt="" class="article-card-image">
-          <div class="article-card-gradient"></div>
-          <span class="article-card-category">Creator Economy</span>
-        </div>
-        <div class="article-card-content">
-          <div class="article-card-meta">
-            <span>August 2025</span>
-            <span>·</span>
-            <span>5 Min.</span>
-          </div>
-          <h3 class="article-card-title">
-            Community Building: Von Followern zu Brand Advocates
-          </h3>
-          <p class="article-card-excerpt">
-            Engagement-Strategien die über Likes hinausgehen und echte 
-            Communities aufbauen.
-          </p>
-          <div class="article-card-footer">
-            <div class="article-card-author">
-              <div class="article-card-avatar">SK</div>
-              <span class="article-card-author-name">S. Klein</span>
-            </div>
-            <span class="article-card-read-time">5 Min.</span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="article-card" data-category="hospitality">
-        <div class="article-card-visual">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250' viewBox='0 0 400 250'%3E%3Crect fill='%231c2029'/%3E%3Cdefs%3E%3ClinearGradient id='h1' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%2300d4aa' stop-opacity='0.2'/%3E%3Cstop offset='1' stop-color='%23e8c547' stop-opacity='0.1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23h1)' width='400' height='250'/%3E%3Ctext x='200' y='130' text-anchor='middle' fill='%23ffffff' fill-opacity='0.12' font-size='48' font-family='serif'%3E★%3C/text%3E%3C/svg%3E" 
-               alt="" class="article-card-image">
-          <div class="article-card-gradient"></div>
-          <span class="article-card-category">Hospitality</span>
-        </div>
-        <div class="article-card-content">
-          <div class="article-card-meta">
-            <span>August 2025</span>
-            <span>·</span>
-            <span>7 Min.</span>
-          </div>
-          <h3 class="article-card-title">
-            Meta Ads für Luxushotels: Targeting-Strategien die konvertieren
-          </h3>
-          <p class="article-card-excerpt">
-            Lookalike Audiences, Interest Stacking und Creative Best Practices 
-            für High-End Hospitality Campaigns.
-          </p>
-          <div class="article-card-footer">
-            <div class="article-card-author">
-              <div class="article-card-avatar">LS</div>
-              <span class="article-card-author-name">LS Editorial</span>
-            </div>
-            <span class="article-card-read-time">7 Min.</span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="article-card" data-category="strategy">
-        <div class="article-card-visual">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250' viewBox='0 0 400 250'%3E%3Crect fill='%231c2029'/%3E%3Cdefs%3E%3ClinearGradient id='h2' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%234a9eff' stop-opacity='0.25'/%3E%3Cstop offset='1' stop-color='%2300d4aa' stop-opacity='0.05'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23h2)' width='400' height='250'/%3E%3Ctext x='200' y='130' text-anchor='middle' fill='%23ffffff' fill-opacity='0.12' font-size='48' font-family='serif'%3E⬡%3C/text%3E%3C/svg%3E" 
-               alt="" class="article-card-image">
-          <div class="article-card-gradient"></div>
-          <span class="article-card-category">Strategy</span>
-        </div>
-        <div class="article-card-content">
-          <div class="article-card-meta">
-            <span>Juli 2025</span>
-            <span>·</span>
-            <span>8 Min.</span>
-          </div>
-          <h3 class="article-card-title">
-            Website Redesign ROI: Wann sich ein Relaunch wirklich lohnt
-          </h3>
-          <p class="article-card-excerpt">
-            Conversion-Daten, technische Schulden und Brand Perception – 
-            die entscheidenden Faktoren für die Redesign-Entscheidung.
-          </p>
-          <div class="article-card-footer">
-            <div class="article-card-author">
-              <div class="article-card-avatar">TB</div>
-              <span class="article-card-author-name">T. Berger</span>
-            </div>
-            <span class="article-card-read-time">8 Min.</span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="article-card" data-category="ai">
-        <div class="article-card-visual">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250' viewBox='0 0 400 250'%3E%3Crect fill='%231c2029'/%3E%3Cdefs%3E%3ClinearGradient id='h3' x1='1' x2='0' y1='1' y2='0'%3E%3Cstop offset='0' stop-color='%23ff6b6b' stop-opacity='0.2'/%3E%3Cstop offset='1' stop-color='%23e8c547' stop-opacity='0.1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23h3)' width='400' height='250'/%3E%3Ctext x='200' y='130' text-anchor='middle' fill='%23ffffff' fill-opacity='0.12' font-size='48' font-family='serif'%3E◎%3C/text%3E%3C/svg%3E" 
-               alt="" class="article-card-image">
-          <div class="article-card-gradient"></div>
-          <span class="article-card-category">AI & Automation</span>
-        </div>
-        <div class="article-card-content">
-          <div class="article-card-meta">
-            <span>Juli 2025</span>
-            <span>·</span>
-            <span>6 Min.</span>
-          </div>
-          <h3 class="article-card-title">
-            Prompt Engineering für Marketing Teams: Ein praktischer Guide
-          </h3>
-          <p class="article-card-excerpt">
-            Von Ad Copy bis Landing Pages – wie Marketing-Teams AI-Tools 
-            effektiv für ihre tägliche Arbeit nutzen.
-          </p>
-          <div class="article-card-footer">
-            <div class="article-card-author">
-              <div class="article-card-avatar">JW</div>
-              <span class="article-card-author-name">J. Weber</span>
-            </div>
-            <span class="article-card-read-time">6 Min.</span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="article-card" data-category="case-study">
-        <div class="article-card-visual">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250' viewBox='0 0 400 250'%3E%3Crect fill='%231c2029'/%3E%3Cdefs%3E%3ClinearGradient id='h4' x1='0' x2='1' y1='0' y2='0'%3E%3Cstop offset='0' stop-color='%2300d4aa' stop-opacity='0.3'/%3E%3Cstop offset='1' stop-color='%234a9eff' stop-opacity='0.1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23h4)' width='400' height='250'/%3E%3Ctext x='200' y='130' text-anchor='middle' fill='%23ffffff' fill-opacity='0.12' font-size='48' font-family='serif'%3E▲%3C/text%3E%3C/svg%3E" 
-               alt="" class="article-card-image">
-          <div class="article-card-gradient"></div>
-          <span class="article-card-category">Case Study</span>
-        </div>
-        <div class="article-card-content">
-          <div class="article-card-meta">
-            <span>Juni 2025</span>
-            <span>·</span>
-            <span>5 Min.</span>
-          </div>
-          <h3 class="article-card-title">
-            HELIOPARK Bad Hirsch: Spa-Marketing mit Conversion-Fokus
-          </h3>
-          <p class="article-card-excerpt">
-            Wie gezielte Landing Pages und saisonale Kampagnen die 
-            Spa-Buchungen eines Traditionshotels um 180% steigerten.
-          </p>
-          <div class="article-card-footer">
-            <div class="article-card-author">
-              <div class="article-card-avatar">LS</div>
-              <span class="article-card-author-name">LS Editorial</span>
-            </div>
-            <span class="article-card-read-time">5 Min.</span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="article-card" data-category="creator">
-        <div class="article-card-visual">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250' viewBox='0 0 400 250'%3E%3Crect fill='%231c2029'/%3E%3Cdefs%3E%3ClinearGradient id='h5' x1='0' x2='1' y1='1' y2='0'%3E%3Cstop offset='0' stop-color='%23e8c547' stop-opacity='0.25'/%3E%3Cstop offset='1' stop-color='%23ff6b6b' stop-opacity='0.1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23h5)' width='400' height='250'/%3E%3Ctext x='200' y='130' text-anchor='middle' fill='%23ffffff' fill-opacity='0.12' font-size='48' font-family='serif'%3E▶%3C/text%3E%3C/svg%3E" 
-               alt="" class="article-card-image">
-          <div class="article-card-gradient"></div>
-          <span class="article-card-category">Creator Economy</span>
-        </div>
-        <div class="article-card-content">
-          <div class="article-card-meta">
-            <span>Juni 2025</span>
-            <span>·</span>
-            <span>6 Min.</span>
-          </div>
-          <h3 class="article-card-title">
-            YouTube Shorts vs. TikTok: Wo Creator 2025 investieren sollten
-          </h3>
-          <p class="article-card-excerpt">
-            Algorithmus-Unterschiede, Monetarisierung und Audience Demographics – 
-            ein datenbasierter Plattform-Vergleich.
-          </p>
-          <div class="article-card-footer">
-            <div class="article-card-author">
-              <div class="article-card-avatar">MK</div>
-              <span class="article-card-author-name">M. Krause</span>
-            </div>
-            <span class="article-card-read-time">6 Min.</span>
-          </div>
-        </div>
-      </article>
-      
-    </div>
-    
-    <!-- Load More Button -->
-    <div class="load-more-container">
-      <button class="load-more-btn" id="load-more">
-        <span>Weitere Artikel laden</span>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 5v14M5 12l7 7 7-7"/>
-        </svg>
-      </button>
-    </div>
-    
-  </div>
-</section>
-
-<!-- Topics Section -->
-<section class="topics-section">
-  <div class="topics-container">
-    <div class="topics-header">
-      <div>
-        <h2 class="topics-title">Themengebiete</h2>
-        <p class="topics-subtitle">Entdecken Sie Insights nach Fokusbereich</p>
+        <span>•</span>
+        <span id="modal-date"></span>
+        <span>•</span>
+        <span id="modal-read-time"></span>
       </div>
     </div>
-    
-    <div class="topics-grid stagger-children">
-      <a href="#" class="topic-card" data-topic="ai">
-        <div class="topic-icon">🤖</div>
-        <h3 class="topic-name">AI & Automation</h3>
-        <p class="topic-count">14 Artikel</p>
-      </a>
-      
-      <a href="#" class="topic-card" data-topic="creator">
-        <div class="topic-icon">✦</div>
-        <h3 class="topic-name">Creator Economy</h3>
-        <p class="topic-count">11 Artikel</p>
-      </a>
-      
-      <a href="#" class="topic-card" data-topic="strategy">
-        <div class="topic-icon">◈</div>
-        <h3 class="topic-name">Digital Strategy</h3>
-        <p class="topic-count">9 Artikel</p>
-      </a>
-      
-      <a href="#" class="topic-card" data-topic="hospitality">
-        <div class="topic-icon">⌂</div>
-        <h3 class="topic-name">Hospitality Tech</h3>
-        <p class="topic-count">8 Artikel</p>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Newsletter Section -->
-<section class="newsletter-section">
-  <div class="newsletter-bg-pattern"></div>
-  <div class="newsletter-container fade-in">
-    <div class="newsletter-icon">✉</div>
-    <h2 class="newsletter-title">Strategic Briefing</h2>
-    <p class="newsletter-subtitle">
-      Monatliche Insights zu AI, Creator Economy und Digital Transformation – 
-      kuratiert für Entscheider.
-    </p>
-    <form class="newsletter-form" id="newsletter-form">
-      <input type="email" class="newsletter-input" placeholder="ihre@email.com" required>
-      <button type="submit" class="newsletter-button">Abonnieren</button>
-    </form>
-    <p class="newsletter-privacy">Kein Spam. Jederzeit abbestellbar.</p>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="footer-logo">
-          <div class="footer-logo-mark">LS</div>
-          <span class="footer-logo-text">LEVERAGE STRATEGIES</span>
-        </div>
-        <p class="footer-tagline">
-          Digital Excellence für Creator, Hospitality und Enterprise. 
-          Strategy, Technology, Results.
-        </p>
-      </div>
-      
-      <div class="footer-column">
-        <h4 class="footer-column-title">Services</h4>
-        <ul class="footer-links">
-          <li><a href="#" class="footer-link">Creator Solutions</a></li>
-          <li><a href="#" class="footer-link">Hospitality Marketing</a></li>
-          <li><a href="#" class="footer-link">Enterprise Tech</a></li>
-          <li><a href="#" class="footer-link">AI Integration</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-column">
-        <h4 class="footer-column-title">Company</h4>
-        <ul class="footer-links">
-          <li><a href="#" class="footer-link">About</a></li>
-          <li><a href="#" class="footer-link">Work</a></li>
-          <li><a href="#" class="footer-link">Insights</a></li>
-          <li><a href="#" class="footer-link">Contact</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-column">
-        <h4 class="footer-column-title">Connect</h4>
-        <ul class="footer-links">
-          <li><a href="#" class="footer-link">LinkedIn</a></li>
-          <li><a href="#" class="footer-link">Twitter / X</a></li>
-          <li><a href="#" class="footer-link">Instagram</a></li>
-          <li><a href="#" class="footer-link">hello@leverage.de</a></li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="footer-bottom">
-      <p class="footer-copyright">© 2025 LEVERAGE STRATEGIES. All rights reserved.</p>
-      <div class="footer-legal">
-        <a href="#">Impressum</a>
-        <a href="#">Datenschutz</a>
-        <a href="#">AGB</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- Article Modal -->
-<div class="article-modal-overlay" id="article-modal">
-  <button class="article-modal-close" id="modal-close">×</button>
-  <div class="article-modal">
-    <div class="article-modal-hero">
-      <img src="" alt="" class="article-modal-hero-image" id="modal-image">
-      <div class="article-modal-hero-overlay"></div>
-    </div>
-    <div class="article-modal-content">
-      <span class="article-modal-category" id="modal-category">AI & Automation</span>
-      <h1 class="article-modal-title" id="modal-title">Article Title</h1>
-      <div class="article-modal-meta">
-        <div class="article-modal-author">
-          <div class="article-modal-author-avatar" id="modal-avatar">LS</div>
-          <span class="article-modal-author-name" id="modal-author">Author Name</span>
-        </div>
-        <span class="article-modal-date" id="modal-date">November 2025</span>
-        <span class="article-modal-reading-time" id="modal-reading-time">8 Min. Lesezeit</span>
-      </div>
-      <div class="article-modal-body" id="modal-body">
-        <!-- Content will be injected here -->
-      </div>
-      <div class="article-modal-tags" id="modal-tags">
-        <!-- Tags will be injected here -->
-      </div>
-      <div class="article-modal-cta">
-        <h3 class="article-modal-cta-title">Ähnliche Herausforderung?</h3>
-        <p class="article-modal-cta-text">Lassen Sie uns über Ihre digitale Strategie sprechen.</p>
-        <a href="/contact" class="article-modal-cta-btn">
-          Gespräch vereinbaren
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </a>
-      </div>
-    </div>
+    <div class="modal-body" id="modal-body"></div>
+    <div class="modal-tags" id="modal-tags"></div>
   </div>
 </div>
 
+<!-- Footer -->
+<footer class="footer">
+  <p>© 2025 LEVERAGE STRATEGIES. Alle Rechte vorbehalten.</p>
+</footer>
+
 <script>
-// Article Data Store
-const articlesData = {
-  'featured-ai': {
-    category: 'AI & Automation',
-    title: 'Claude, Copilot & Co: Wie Enterprise AI 2025 Workflows revolutioniert',
-    author: 'LEVERAGE Editorial',
-    avatar: 'LS',
-    date: 'November 2025',
-    readTime: '8 Min. Lesezeit',
-    tags: ['AI', 'Enterprise', 'Produktivität', 'Workflow Automation'],
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Crect fill='%2314171e'/%3E%3Cdefs%3E%3ClinearGradient id='ma' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%2300d4aa' stop-opacity='0.3'/%3E%3Cstop offset='1' stop-color='%234a9eff' stop-opacity='0.15'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23ma)' width='800' height='400'/%3E%3Ctext x='400' y='200' text-anchor='middle' fill='%23ffffff' fill-opacity='0.1' font-size='80' font-family='serif'%3EAI%3C/text%3E%3C/svg%3E",
-    content: `
-      <p>Die Integration von AI-Assistenten in Unternehmensworkflows hat 2025 einen Wendepunkt erreicht. Was vor zwei Jahren noch als experimentelle Technologie galt, ist heute fester Bestandteil produktiver Arbeitsumgebungen. Doch welche Tools liefern tatsächlich messbaren Mehrwert?</p>
-      
-      <h2>Der aktuelle Stand der Enterprise AI</h2>
-      <p>Claude von Anthropic, Microsoft Copilot und Google Gemini dominieren den Markt für Enterprise-AI. Jede Plattform hat ihre Stärken: Claude überzeugt bei komplexen Analysen und Code-Generierung, Copilot integriert sich nahtlos in die Microsoft-Welt, und Gemini punktet mit multimodalen Fähigkeiten.</p>
-      
-      <blockquote>„Die Frage ist nicht mehr ob AI, sondern wie AI strategisch eingesetzt wird, um Wettbewerbsvorteile zu schaffen."</blockquote>
-      
-      <h2>Messbare Produktivitätssteigerungen</h2>
-      <p>Unsere Analysen zeigen konkrete Verbesserungen in verschiedenen Bereichen:</p>
-      <ul>
-        <li><strong>Dokumentenerstellung:</strong> 60-70% Zeitersparnis bei Erstenwürfen</li>
-        <li><strong>Code Reviews:</strong> 40% schnellere Identifikation von Issues</li>
-        <li><strong>Datenanalyse:</strong> Komplexe Queries in Minuten statt Stunden</li>
-        <li><strong>Content-Produktion:</strong> 3x höhere Output-Rate bei gleichbleibender Qualität</li>
-      </ul>
-      
-      <h2>Strategische Implementierung</h2>
-      <p>Der Erfolg hängt weniger von der Tool-Auswahl als von der Implementierungsstrategie ab. Unternehmen, die AI als Augmentation statt Replacement verstehen, erzielen die besten Ergebnisse. Das bedeutet: klare Use Cases definieren, Teams schulen und Qualitätsprozesse anpassen.</p>
-      
-      <p>Besonders wichtig ist die Integration in bestehende Workflows. Ein AI-Tool, das parallel zu etablierten Prozessen existiert, wird selten genutzt. Die erfolgreichsten Implementierungen betten AI direkt in die täglichen Arbeitsabläufe ein.</p>
-      
-      <h2>Ausblick: Was 2026 bringt</h2>
-      <p>Die nächste Evolutionsstufe sind AI-Agents – autonome Systeme, die nicht nur assistieren, sondern eigenständig Tasks erledigen. Erste Enterprise-Piloten zeigen vielversprechende Ergebnisse, insbesondere bei repetitiven Workflows wie Reporting und Datenpflege.</p>
-    `
-  },
-  'creator-monetization': {
-    category: 'Creator Economy',
-    title: 'Creator Monetarisierung 2025: Jenseits von Sponsorings',
-    author: 'M. Krause',
-    avatar: 'MK',
-    date: 'November 2025',
-    readTime: '5 Min. Lesezeit',
-    tags: ['Creator Economy', 'Monetarisierung', 'Digital Products', 'Community'],
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Crect fill='%2314171e'/%3E%3Cdefs%3E%3ClinearGradient id='mb' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23e8c547' stop-opacity='0.25'/%3E%3Cstop offset='1' stop-color='%23ff6b6b' stop-opacity='0.1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23mb)' width='800' height='400'/%3E%3Ctext x='400' y='200' text-anchor='middle' fill='%23ffffff' fill-opacity='0.1' font-size='80' font-family='serif'%3E✦%3C/text%3E%3C/svg%3E",
-    content: `
-      <p>Die Creator Economy hat sich fundamental gewandelt. Während Sponsorings und Brand Deals lange Zeit die Haupteinnahmequelle waren, setzen erfolgreiche Creator 2025 auf diversifizierte Revenue-Streams, die unabhängiger und nachhaltiger sind.</p>
-      
-      <h2>Die neuen Säulen der Creator-Einnahmen</h2>
-      <p>Erfolgreiche Creator bauen heute auf mehreren Einkommensquellen auf:</p>
-      <ul>
-        <li><strong>Digital Products:</strong> E-Books, Kurse, Templates und Tools</li>
-        <li><strong>Membership Communities:</strong> Exklusive Inhalte und Zugang</li>
-        <li><strong>Services:</strong> Consulting, Coaching, Done-for-You Angebote</li>
-        <li><strong>Affiliate-Partnerschaften:</strong> Strategisch ausgewählte Produkte</li>
-      </ul>
-      
-      <blockquote>„Der größte Shift: Creator denken wie Unternehmer, nicht wie Influencer."</blockquote>
-      
-      <h2>Die Subscription Economy für Creator</h2>
-      <p>Plattformen wie Patreon, Substack und Circle haben es Creators ermöglicht, direktere Beziehungen zu ihrer Audience aufzubauen. Der Vorteil: wiederkehrende Einnahmen und weniger Abhängigkeit von Algorithmus-Änderungen.</p>
-      
-      <p>Die erfolgreichsten Creator kombinieren kostenlose Reichweiten-Plattformen (TikTok, YouTube, Instagram) mit Owned Channels (Newsletter, Communities), um eine nachhaltige Basis aufzubauen.</p>
-      
-      <h2>Revenue-Split 2025</h2>
-      <p>Top-Creator mit 100k+ Followern erzielen heute typischerweise: 30% aus eigenen Produkten, 25% aus Memberships, 25% aus Sponsorings, und 20% aus Affiliate und Services. Diese Diversifikation schützt vor Plattform-Risiken.</p>
-    `
-  },
-  'direct-booking': {
-    category: 'Hospitality',
-    title: 'Direct Booking Revolution: Wie Hotels OTA-Abhängigkeit reduzieren',
-    author: 'LS Editorial',
-    avatar: 'LS',
-    date: 'Oktober 2025',
-    readTime: '6 Min. Lesezeit',
-    tags: ['Hospitality', 'Direct Booking', 'Digital Marketing', 'Hotels'],
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Crect fill='%2314171e'/%3E%3Cdefs%3E%3ClinearGradient id='mc' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%2300d4aa' stop-opacity='0.2'/%3E%3Cstop offset='1' stop-color='%230066cc' stop-opacity='0.1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23mc)' width='800' height='400'/%3E%3Ctext x='400' y='200' text-anchor='middle' fill='%23ffffff' fill-opacity='0.1' font-size='80' font-family='serif'%3E⌂%3C/text%3E%3C/svg%3E",
-    content: `
-      <p>Die Abhängigkeit von Booking.com, Expedia und anderen OTAs kostet Hotels nicht nur 15-25% Provision pro Buchung, sondern auch wertvolle Kundendaten und Kontrolle über die Gästekommunikation. Innovative Hotels gewinnen diese Kontrolle zurück.</p>
-      
-      <h2>Der wahre Preis der OTA-Abhängigkeit</h2>
-      <p>Neben den offensichtlichen Provisionskosten verlieren Hotels bei OTA-Buchungen:</p>
-      <ul>
-        <li>Direkte Kommunikation vor Anreise</li>
-        <li>Upselling-Möglichkeiten (Spa, Restaurant, Events)</li>
-        <li>Kundendaten für Remarketing</li>
-        <li>Kontrolle über Preisdarstellung und Branding</li>
-      </ul>
-      
-      <h2>Die Direct-Booking-Strategie</h2>
-      <p>Erfolgreiche Hotels setzen auf eine Kombination aus:</p>
-      
-      <p><strong>1. Conversion-optimierte Landing Pages:</strong> Spezialisierte Seiten für jeden Buchungsanlass – von Wellness-Wochenenden bis Business-Aufenthalten. Diese Seiten ranken oft besser als die Hotel-Homepage und konvertieren bis zu 3x höher.</p>
-      
-      <p><strong>2. Retargeting-Kampagnen:</strong> Besucher, die auf OTAs nach dem Hotel gesucht haben, werden mit Direct-Booking-Vorteilen angesprochen.</p>
-      
-      <p><strong>3. Best-Price-Garantie:</strong> Die klare Kommunikation, dass Direktbuchungen immer günstiger sind, kombiniert mit exklusiven Extras.</p>
-      
-      <blockquote>„Hotels, die 50%+ Direct Bookings erreichen, haben einen fundamentalen Wettbewerbsvorteil."</blockquote>
-      
-      <h2>Case Study: Seehotel Leoni</h2>
-      <p>Ein Boutique Hotel am Starnberger See steigerte seine Direct-Booking-Rate von 22% auf 68% innerhalb von 8 Monaten. Der Schlüssel: thematische Landing Pages für Hochzeiten, Spa-Aufenthalte und Business-Events, kombiniert mit gezieltem Performance Marketing.</p>
-    `
-  },
-  'digital-roi': {
-    category: 'Strategy',
-    title: 'Digital ROI messen: KPIs die wirklich zählen',
-    author: 'T. Berger',
-    avatar: 'TB',
-    date: 'Oktober 2025',
-    readTime: '7 Min. Lesezeit',
-    tags: ['Digital Strategy', 'Analytics', 'ROI', 'KPIs'],
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Crect fill='%2314171e'/%3E%3Cdefs%3E%3ClinearGradient id='md' x1='0' x2='1' y1='1' y2='0'%3E%3Cstop offset='0' stop-color='%234a9eff' stop-opacity='0.25'/%3E%3Cstop offset='1' stop-color='%2300d4aa' stop-opacity='0.1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23md)' width='800' height='400'/%3E%3Ctext x='400' y='200' text-anchor='middle' fill='%23ffffff' fill-opacity='0.1' font-size='80' font-family='serif'%3E◈%3C/text%3E%3C/svg%3E",
-    content: `
-      <p>Viele Unternehmen investieren erheblich in digitales Marketing, können aber den tatsächlichen Business Impact nicht beziffern. Das Problem: Sie messen die falschen Metriken.</p>
-      
-      <h2>Vanity Metrics vs. Business Metrics</h2>
-      <p>Likes, Impressions und Follower-Zahlen fühlen sich gut an, sagen aber wenig über den Geschäftserfolg aus. Die relevanten Metriken hängen vom Geschäftsmodell ab:</p>
-      
-      <ul>
-        <li><strong>E-Commerce:</strong> Customer Acquisition Cost (CAC), Customer Lifetime Value (CLV), Return on Ad Spend (ROAS)</li>
-        <li><strong>SaaS:</strong> Monthly Recurring Revenue (MRR), Churn Rate, Trial-to-Paid Conversion</li>
-        <li><strong>Lead Generation:</strong> Cost per Qualified Lead, Sales Qualified Lead Rate, Pipeline Value</li>
-        <li><strong>Hospitality:</strong> Direct Booking Rate, Average Daily Rate (ADR), Revenue per Available Room (RevPAR)</li>
-      </ul>
-      
-      <h2>Das Attribution-Problem</h2>
-      <p>Die größte Herausforderung: Customer Journeys sind komplex. Ein Hotelgast sieht vielleicht eine Instagram-Anzeige, recherchiert auf Google, vergleicht auf Booking.com und bucht dann direkt. Welchem Kanal gebührt der Credit?</p>
-      
-      <blockquote>„Multi-Touch Attribution ist nicht perfekt, aber unendlich besser als Last-Click."</blockquote>
-      
-      <h2>Ein praktisches Framework</h2>
-      <p>Wir empfehlen einen dreistufigen Ansatz:</p>
-      <p><strong>1. North Star Metric definieren:</strong> Die eine Kennzahl, die den Unternehmenserfolg am besten abbildet.</p>
-      <p><strong>2. Leading Indicators identifizieren:</strong> Frühindikatoren, die die North Star Metric vorhersagen.</p>
-      <p><strong>3. Channel-spezifische Ziele setzen:</strong> Jeder Kanal hat seine Stärken – nicht alle müssen direkt konvertieren.</p>
-    `
-  },
-  'seehotel-case': {
-    category: 'Case Study',
-    title: '+340% Direct Bookings: Seehotel Leoni Transformation',
-    author: 'LS Editorial',
-    avatar: 'LS',
-    date: 'September 2025',
-    readTime: '4 Min. Lesezeit',
-    tags: ['Case Study', 'Hospitality', 'Direct Booking', 'Landing Pages'],
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Crect fill='%2314171e'/%3E%3Cdefs%3E%3ClinearGradient id='me' x1='0' x2='1' y1='0' y2='0'%3E%3Cstop offset='0' stop-color='%2300d4aa' stop-opacity='0.3'/%3E%3Cstop offset='1' stop-color='%2300d4aa' stop-opacity='0.05'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23me)' width='800' height='400'/%3E%3Ctext x='400' y='200' text-anchor='middle' fill='%23ffffff' fill-opacity='0.1' font-size='80' font-family='serif'%3E↗%3C/text%3E%3C/svg%3E",
-    content: `
-      <p>Das Seehotel Leoni am Starnberger See stand vor einer klassischen Herausforderung: Trotz ausgezeichneter Bewertungen und Premium-Positionierung kamen über 75% der Buchungen über OTAs – mit entsprechenden Provisionskosten.</p>
-      
-      <h2>Die Ausgangssituation</h2>
-      <ul>
-        <li>Direct Booking Rate: 22%</li>
-        <li>Durchschnittliche OTA-Provision: 18%</li>
-        <li>Veraltete Website mit niedriger Conversion Rate</li>
-        <li>Kein systematisches Performance Marketing</li>
-      </ul>
-      
-      <h2>Die Strategie</h2>
-      <p><strong>Phase 1: Landing Page Ecosystem</strong></p>
-      <p>Statt einer generischen Hotel-Website entwickelten wir spezialisierte Landing Pages für jeden Buchungsanlass: Hochzeiten, Spa-Wochenenden, Business-Events und saisonale Angebote. Jede Seite wurde für spezifische Suchintentionen optimiert.</p>
-      
-      <p><strong>Phase 2: Performance Marketing</strong></p>
-      <p>Gezieltes Google Ads und Meta Ads Targeting für Zielgruppen mit hoher Buchungswahrscheinlichkeit: Hochzeitspaare im Planungsprozess, Spa-Interessierte im Umkreis von 150km, Business-Reisende mit München-Fokus.</p>
-      
-      <p><strong>Phase 3: Conversion Optimization</strong></p>
-      <p>A/B Testing von Booking Widgets, Trust Signals, und Preisdarstellung. Implementierung einer Best-Price-Garantie mit exklusiven Direktbucher-Vorteilen.</p>
-      
-      <h2>Die Ergebnisse nach 8 Monaten</h2>
-      <ul>
-        <li><strong>Direct Booking Rate:</strong> 22% → 68% (+340%)</li>
-        <li><strong>Eingesparte Provisionen:</strong> ~€180.000 p.a.</li>
-        <li><strong>Website Conversion Rate:</strong> 1.2% → 4.8%</li>
-        <li><strong>Cost per Booking:</strong> -62% vs. OTA-Provisionen</li>
-      </ul>
-      
-      <blockquote>„Die Investition hat sich innerhalb von 4 Monaten amortisiert."</blockquote>
-    `
-  },
-  'ai-content': {
-    category: 'AI & Automation',
-    title: 'AI-gestützte Content Produktion: Effizienz ohne Qualitätsverlust',
-    author: 'J. Weber',
-    avatar: 'JW',
-    date: 'September 2025',
-    readTime: '6 Min. Lesezeit',
-    tags: ['AI', 'Content', 'Produktivität', 'Marketing'],
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Crect fill='%2314171e'/%3E%3Cdefs%3E%3ClinearGradient id='mf' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23ff6b6b' stop-opacity='0.2'/%3E%3Cstop offset='1' stop-color='%234a9eff' stop-opacity='0.1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23mf)' width='800' height='400'/%3E%3Ctext x='400' y='200' text-anchor='middle' fill='%23ffffff' fill-opacity='0.1' font-size='80' font-family='serif'%3E⚡%3C/text%3E%3C/svg%3E",
-    content: `
-      <p>AI-Tools können Content-Produktion dramatisch beschleunigen – wenn sie richtig eingesetzt werden. Der Schlüssel liegt in der strategischen Integration, nicht im blinden Automatisieren.</p>
-      
-      <h2>Wo AI wirklich hilft</h2>
-      <ul>
-        <li><strong>Erste Entwürfe:</strong> AI erstellt schnell Grundstrukturen, die Menschen verfeinern</li>
-        <li><strong>Variationen:</strong> Aus einem Asset werden zehn A/B-Test-Versionen</li>
-        <li><strong>Recherche:</strong> Komplexe Themen werden schnell zusammengefasst</li>
-        <li><strong>SEO-Optimierung:</strong> Keyword-Integration ohne Lesefluss-Verlust</li>
-      </ul>
-      
-      <h2>Die Grenzen erkennen</h2>
-      <p>AI produziert oft generischen Content, der technisch korrekt, aber nicht memorable ist. Für Thought Leadership, Brand Voice und emotionale Storytelling bleibt menschliche Kreativität unersetzlich.</p>
-      
-      <blockquote>„AI ist ein Multiplikator, kein Ersatz. Sie verstärkt die Fähigkeiten guter Content-Teams."</blockquote>
-      
-      <h2>Best Practices für den Workflow</h2>
-      <p><strong>1. Briefing ist alles:</strong> Je präziser der Prompt, desto besser das Ergebnis. Investiere Zeit in Templates und Styleguides für AI.</p>
-      
-      <p><strong>2. Human Review nicht skippen:</strong> Jedes AI-generierte Stück muss von Menschen geprüft und angepasst werden. Faktenchecking ist obligatorisch.</p>
-      
-      <p><strong>3. Brand Voice trainieren:</strong> Moderne AI-Tools können auf spezifische Tonalität trainiert werden. Nutze diese Möglichkeit.</p>
-      
-      <p><strong>4. Metriken tracken:</strong> Vergleiche AI-assistierten Content mit rein menschlich erstelltem. Die Daten zeigen, wo AI Mehrwert liefert.</p>
-    `
-  },
-  'community-building': {
-    category: 'Creator Economy',
-    title: 'Community Building: Von Followern zu Brand Advocates',
-    author: 'S. Klein',
-    avatar: 'SK',
-    date: 'August 2025',
-    readTime: '5 Min. Lesezeit',
-    tags: ['Creator Economy', 'Community', 'Engagement', 'Brand Building'],
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Crect fill='%2314171e'/%3E%3Cdefs%3E%3ClinearGradient id='mg' x1='1' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23e8c547' stop-opacity='0.2'/%3E%3Cstop offset='1' stop-color='%2300d4aa' stop-opacity='0.1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23mg)' width='800' height='400'/%3E%3Ctext x='400' y='200' text-anchor='middle' fill='%23ffffff' fill-opacity='0.1' font-size='80' font-family='serif'%3E♦%3C/text%3E%3C/svg%3E",
-    content: `
-      <p>10.000 engagierte Community-Mitglieder sind wertvoller als 1 Million passive Follower. Die Herausforderung: Wie baut man echte Communities statt reiner Audiences?</p>
-      
-      <h2>Der Unterschied zwischen Audience und Community</h2>
-      <p>Eine Audience konsumiert. Eine Community interagiert – nicht nur mit dem Creator, sondern untereinander. Das ist der fundamentale Unterschied.</p>
-      
-      <ul>
-        <li><strong>Audience:</strong> One-to-many Kommunikation</li>
-        <li><strong>Community:</strong> Many-to-many Interaktion</li>
-      </ul>
-      
-      <h2>Die Bausteine erfolgreicher Communities</h2>
-      <p><strong>1. Shared Identity:</strong> Die Community braucht ein „Wir". Gemeinsame Werte, Ziele oder Interessen, die über den Creator hinausgehen.</p>
-      
-      <p><strong>2. Rituale:</strong> Wiederkehrende Events, Challenges oder Formate, auf die sich Mitglieder freuen können.</p>
-      
-      <p><strong>3. Status und Recognition:</strong> Aktive Mitglieder werden sichtbar gemacht und gewürdigt.</p>
-      
-      <p><strong>4. Exklusivität:</strong> Das Gefühl, Teil von etwas Besonderem zu sein, das nicht jeder hat.</p>
-      
-      <blockquote>„Die besten Communities werden nicht gebaut, sondern ermöglicht."</blockquote>
-      
-      <h2>Plattform-Strategie</h2>
-      <p>Viele Creator machen den Fehler, Communities auf Plattformen aufzubauen, die sie nicht kontrollieren. Discord, Circle oder eigene Plattformen bieten mehr Stabilität als Facebook Groups oder Telegram.</p>
-    `
-  },
-  'meta-ads-hotels': {
-    category: 'Hospitality',
-    title: 'Meta Ads für Luxushotels: Targeting-Strategien die konvertieren',
-    author: 'LS Editorial',
-    avatar: 'LS',
-    date: 'August 2025',
-    readTime: '7 Min. Lesezeit',
-    tags: ['Hospitality', 'Meta Ads', 'Digital Marketing', 'Targeting'],
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Crect fill='%2314171e'/%3E%3Cdefs%3E%3ClinearGradient id='mh' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%2300d4aa' stop-opacity='0.2'/%3E%3Cstop offset='1' stop-color='%23e8c547' stop-opacity='0.1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23mh)' width='800' height='400'/%3E%3Ctext x='400' y='200' text-anchor='middle' fill='%23ffffff' fill-opacity='0.1' font-size='80' font-family='serif'%3E★%3C/text%3E%3C/svg%3E",
-    content: `
-      <p>Meta Ads (Facebook & Instagram) sind für Luxushotels einer der effektivsten Kanäle – wenn das Targeting stimmt. Die Herausforderung: Premium-Gäste erreichen, ohne Budget an unqualifizierte Audiences zu verschwenden.</p>
-      
-      <h2>Die Targeting-Pyramide</h2>
-      <p>Wir arbeiten mit einem dreistufigen Ansatz:</p>
-      
-      <p><strong>Stufe 1: Retargeting (höchste Priorität)</strong></p>
-      <ul>
-        <li>Website-Besucher der letzten 30-180 Tage</li>
-        <li>Engagement mit Instagram/Facebook Content</li>
-        <li>Bestandsgäste (CRM-Upload)</li>
-      </ul>
-      
-      <p><strong>Stufe 2: Lookalike Audiences</strong></p>
-      <ul>
-        <li>1-2% Lookalikes von Buchern</li>
-        <li>Lookalikes von High-Value Customers</li>
-        <li>Lookalikes von Newsletter-Abonnenten</li>
-      </ul>
-      
-      <p><strong>Stufe 3: Interest-Based Targeting</strong></p>
-      <ul>
-        <li>Luxury Travel + Einkommens-Signale</li>
-        <li>Competitor Interests</li>
-        <li>Lifestyle-Interessen (Fine Dining, Wellness, Golf)</li>
-      </ul>
-      
-      <blockquote>„80% des Budgets sollten in Stufe 1 und 2 fließen. Stufe 3 dient der Neukundengewinnung."</blockquote>
-      
-      <h2>Creative Best Practices</h2>
-      <p>Für Luxushotels funktionieren am besten: authentische Room Tours (nicht zu poliert), Gäste-Testimonials, Behind-the-Scenes vom Service, und saisonale Package-Angebote mit klarem Value Proposition.</p>
-      
-      <p>Vermeiden: Stock-ähnliche Bilder, übertriebene Filter, und generische "Buchen Sie jetzt"-CTAs ohne konkreten Anlass.</p>
-    `
-  },
-  'website-redesign': {
-    category: 'Strategy',
-    title: 'Website Redesign ROI: Wann sich ein Relaunch wirklich lohnt',
-    author: 'T. Berger',
-    avatar: 'TB',
-    date: 'Juli 2025',
-    readTime: '8 Min. Lesezeit',
-    tags: ['Strategy', 'Website', 'ROI', 'Conversion'],
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Crect fill='%2314171e'/%3E%3Cdefs%3E%3ClinearGradient id='mi' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%234a9eff' stop-opacity='0.25'/%3E%3Cstop offset='1' stop-color='%2300d4aa' stop-opacity='0.05'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23mi)' width='800' height='400'/%3E%3Ctext x='400' y='200' text-anchor='middle' fill='%23ffffff' fill-opacity='0.1' font-size='80' font-family='serif'%3E⬡%3C/text%3E%3C/svg%3E",
-    content: `
-      <p>Ein Website-Relaunch ist ein erhebliches Investment – oft €50.000-200.000+ für Unternehmen mittlerer Größe. Die Frage ist nicht, ob die Website alt aussieht, sondern ob der Business Case stimmt.</p>
-      
-      <h2>Die falschen Gründe für einen Relaunch</h2>
-      <ul>
-        <li>"Die Website ist 3 Jahre alt" (Alter allein ist kein Grund)</li>
-        <li>"Der Wettbewerb hat eine neue Website" (Follow-the-Leader ist keine Strategie)</li>
-        <li>"Das Design gefällt dem CEO nicht mehr" (Subjektive Präferenzen ≠ Business Needs)</li>
-      </ul>
-      
-      <h2>Die richtigen Gründe</h2>
-      <p><strong>1. Conversion-Probleme:</strong> Die Daten zeigen, dass qualifizierter Traffic nicht konvertiert. Bounce Rates sind hoch, Verweildauer niedrig, Conversion Rate unterdurchschnittlich.</p>
-      
-      <p><strong>2. Technische Schulden:</strong> Die Plattform ist nicht mehr wartbar, Security-Updates sind schwierig, Performance leidet, Mobile-Experience ist broken.</p>
-      
-      <p><strong>3. Strategische Neuausrichtung:</strong> Neue Zielgruppen, neue Produkte oder Services, Repositionierung der Marke – die Website muss die neue Strategie widerspiegeln.</p>
-      
-      <blockquote>„Ein Redesign ohne klare KPIs ist ein Hobby-Projekt, kein Business-Investment."</blockquote>
-      
-      <h2>ROI-Berechnung vor dem Relaunch</h2>
-      <p>Vor jedem Relaunch sollte ein klarer Business Case stehen: Welche Conversion-Steigerung ist realistisch? Was bedeutet das in absoluten Zahlen? Wie lange dauert die Amortisation?</p>
-      
-      <p>Faustregel: Ein Relaunch sollte sich innerhalb von 12-18 Monaten durch messbar höhere Conversions amortisieren.</p>
-    `
-  },
-  'prompt-engineering': {
-    category: 'AI & Automation',
-    title: 'Prompt Engineering für Marketing Teams: Ein praktischer Guide',
-    author: 'J. Weber',
-    avatar: 'JW',
-    date: 'Juli 2025',
-    readTime: '6 Min. Lesezeit',
-    tags: ['AI', 'Prompt Engineering', 'Marketing', 'Productivity'],
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Crect fill='%2314171e'/%3E%3Cdefs%3E%3ClinearGradient id='mj' x1='1' x2='0' y1='1' y2='0'%3E%3Cstop offset='0' stop-color='%23ff6b6b' stop-opacity='0.2'/%3E%3Cstop offset='1' stop-color='%23e8c547' stop-opacity='0.1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23mj)' width='800' height='400'/%3E%3Ctext x='400' y='200' text-anchor='middle' fill='%23ffffff' fill-opacity='0.1' font-size='80' font-family='serif'%3E◎%3C/text%3E%3C/svg%3E",
-    content: `
-      <p>Die Qualität von AI-Output hängt direkt von der Qualität des Inputs ab. Marketing Teams, die Prompt Engineering beherrschen, erzielen 3-5x bessere Ergebnisse als Teams mit generischen Prompts.</p>
-      
-      <h2>Die Anatomie eines guten Prompts</h2>
-      <p>Effektive Prompts haben fünf Elemente:</p>
-      <ul>
-        <li><strong>Rolle:</strong> Wer soll die AI sein? (Experte, Zielgruppe, Kritiker)</li>
-        <li><strong>Kontext:</strong> Relevante Hintergrundinformationen</li>
-        <li><strong>Aufgabe:</strong> Was genau soll erstellt werden?</li>
-        <li><strong>Format:</strong> Struktur, Länge, Stil</li>
-        <li><strong>Constraints:</strong> Was soll vermieden werden?</li>
-      </ul>
-      
-      <h2>Praktische Beispiele</h2>
-      <p><strong>Schwacher Prompt:</strong> "Schreibe einen Social Media Post über unser neues Produkt."</p>
-      
-      <p><strong>Starker Prompt:</strong> "Du bist ein Social Media Manager für eine Premium-Lifestyle-Marke. Schreibe einen Instagram-Post für unser neues Spa-Package (€299, inkl. Massage, Sauna, Lunch). Zielgruppe: berufstätige Frauen 35-50, die Auszeit suchen. Ton: einladend, nicht aufdringlich. Max. 150 Zeichen + 5 relevante Hashtags. Vermeide: Superlative, Ausrufezeichen, generische Wellness-Phrasen."</p>
-      
-      <blockquote>„Ein guter Prompt spart mehr Zeit als er kostet – meistens um Faktor 10."</blockquote>
-      
-      <h2>Templates erstellen</h2>
-      <p>Die besten Marketing Teams haben Prompt-Templates für wiederkehrende Aufgaben: Ad Copy, Social Posts, Email Subject Lines, Product Descriptions. Diese Templates werden kontinuierlich verbessert basierend auf Performance-Daten.</p>
-    `
-  },
-  'heliopark-case': {
-    category: 'Case Study',
-    title: 'HELIOPARK Bad Hirsch: Spa-Marketing mit Conversion-Fokus',
-    author: 'LS Editorial',
-    avatar: 'LS',
-    date: 'Juni 2025',
-    readTime: '5 Min. Lesezeit',
-    tags: ['Case Study', 'Hospitality', 'Spa', 'Conversion'],
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Crect fill='%2314171e'/%3E%3Cdefs%3E%3ClinearGradient id='mk' x1='0' x2='1' y1='0' y2='0'%3E%3Cstop offset='0' stop-color='%2300d4aa' stop-opacity='0.3'/%3E%3Cstop offset='1' stop-color='%234a9eff' stop-opacity='0.1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23mk)' width='800' height='400'/%3E%3Ctext x='400' y='200' text-anchor='middle' fill='%23ffffff' fill-opacity='0.1' font-size='80' font-family='serif'%3E▲%3C/text%3E%3C/svg%3E",
-    content: `
-      <p>Das HELIOPARK Bad Hotel zum Hirsch, ein traditionsreiches Wellness-Hotel im Schwarzwald, wollte seine Spa-Auslastung außerhalb der Hauptsaison steigern. Die Herausforderung: ein begrenztes Marketing-Budget optimal einsetzen.</p>
-      
-      <h2>Die Ausgangslage</h2>
-      <ul>
-        <li>Starke Marke in der Region, aber geringe Online-Sichtbarkeit</li>
-        <li>Spa-Auslastung in Nebensaison bei 45%</li>
-        <li>Keine dedizierten Landing Pages für Spa-Angebote</li>
-        <li>Performance Marketing ohne klare Strategie</li>
-      </ul>
-      
-      <h2>Der Ansatz</h2>
-      <p><strong>1. Conversion-optimierte Landing Pages</strong></p>
-      <p>Wir entwickelten drei spezialisierte Landing Pages: "Wellness-Wochenende", "Day Spa" und "Romantik-Package". Jede Seite wurde für spezifische Suchintentionen optimiert und enthielt klare CTAs, Social Proof und Urgency-Elemente.</p>
-      
-      <p><strong>2. Saisonale Kampagnen</strong></p>
-      <p>Statt ganzjährig gleichem Messaging, passten wir Angebote und Kommunikation an saisonale Bedürfnisse an: "Frühlingserwachen", "Herbst-Detox", "Winter-Wellness".</p>
-      
-      <p><strong>3. Geo-Targeting</strong></p>
-      <p>Fokus auf Einzugsgebiet 150km mit höherer Buchungswahrscheinlichkeit für Kurztrips.</p>
-      
-      <h2>Die Ergebnisse</h2>
-      <ul>
-        <li><strong>Spa-Buchungen:</strong> +180% in der Nebensaison</li>
-        <li><strong>Cost per Booking:</strong> €23 (vs. €45+ Branchendurchschnitt)</li>
-        <li><strong>Landing Page Conversion:</strong> 5.2%</li>
-        <li><strong>ROI:</strong> 8:1 auf Ad Spend</li>
-      </ul>
-      
-      <blockquote>„Die Kombination aus präzisem Targeting und conversion-optimierten Landing Pages war der Schlüssel."</blockquote>
-    `
-  },
-  'youtube-vs-tiktok': {
-    category: 'Creator Economy',
-    title: 'YouTube Shorts vs. TikTok: Wo Creator 2025 investieren sollten',
-    author: 'M. Krause',
-    avatar: 'MK',
-    date: 'Juni 2025',
-    readTime: '6 Min. Lesezeit',
-    tags: ['Creator Economy', 'YouTube', 'TikTok', 'Short-Form Video'],
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Crect fill='%2314171e'/%3E%3Cdefs%3E%3ClinearGradient id='ml' x1='0' x2='1' y1='1' y2='0'%3E%3Cstop offset='0' stop-color='%23e8c547' stop-opacity='0.25'/%3E%3Cstop offset='1' stop-color='%23ff6b6b' stop-opacity='0.1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23ml)' width='800' height='400'/%3E%3Ctext x='400' y='200' text-anchor='middle' fill='%23ffffff' fill-opacity='0.1' font-size='80' font-family='serif'%3E▶%3C/text%3E%3C/svg%3E",
-    content: `
-      <p>Short-Form Video dominiert die Content-Landschaft. Aber wo sollten Creator ihre Zeit und Energie investieren – TikTok, YouTube Shorts oder beide?</p>
-      
-      <h2>Die Plattformen im Vergleich</h2>
-      
-      <p><strong>TikTok</strong></p>
-      <ul>
-        <li>Stärkster Algorithmus für organische Reichweite</li>
-        <li>Jüngere Demografie (60% unter 30)</li>
-        <li>Trend-getrieben, schnelllebig</li>
-        <li>Creator Fund: niedrige Auszahlungen (~$0.02-0.04/1000 Views)</li>
-      </ul>
-      
-      <p><strong>YouTube Shorts</strong></p>
-      <ul>
-        <li>Höhere RPM (~$0.05-0.07/1000 Views)</li>
-        <li>Breitere Demografie</li>
-        <li>Synergien mit Long-Form Content</li>
-        <li>Bessere Discoverability für bestehenden YouTube-Channel</li>
-      </ul>
-      
-      <h2>Die strategische Empfehlung</h2>
-      <p>Die Antwort hängt vom Ziel ab:</p>
-      
-      <p><strong>Für maximale Reichweite:</strong> TikTok-first, dann Content auf Shorts recyclen. TikTok's Algorithmus belohnt neue Creator noch immer am stärksten.</p>
-      
-      <p><strong>Für Monetarisierung:</strong> YouTube-first. Die Kombination aus Shorts und Long-Form Video bietet deutlich höhere Revenue-Potenziale.</p>
-      
-      <p><strong>Für Business/B2B:</strong> YouTube klar bevorzugen. Die Audience ist kaufkräftiger und die Inhalte haben längere Halbwertszeit.</p>
-      
-      <blockquote>„TikTok baut Audiences. YouTube baut Businesses."</blockquote>
-      
-      <h2>Der pragmatische Ansatz</h2>
-      <p>Die meisten erfolgreichen Creator produzieren Platform-native Content für TikTok (Trends, Sounds, Stitches) und repurposen ihre besten Performer für YouTube Shorts mit angepasstem Format. Das maximiert Output bei moderatem Zusatzaufwand.</p>
-    `
-  }
+// Category icons
+const categoryIcons = {
+  'ai': '◈',
+  'creator': '✦',
+  'hospitality': '⌂',
+  'strategy': '◆',
+  'case-study': '★'
 };
 
-// Map article cards to article data keys
-const articleMapping = {
-  0: 'featured-ai',
-  1: 'creator-monetization',
-  2: 'direct-booking',
-  3: 'digital-roi',
-  4: 'seehotel-case',
-  5: 'ai-content',
-  6: 'community-building',
-  7: 'meta-ads-hotels',
-  8: 'website-redesign',
-  9: 'prompt-engineering',
-  10: 'heliopark-case',
-  11: 'youtube-vs-tiktok'
+// Category colors for gradients
+const categoryColors = {
+  'ai': ['#00d4aa', '#4a9eff'],
+  'creator': ['#e8c547', '#ff6b6b'],
+  'hospitality': ['#00d4aa', '#0088cc'],
+  'strategy': ['#4a9eff', '#00d4aa'],
+  'case-study': ['#e8c547', '#00d4aa']
 };
 
-// Navigation scroll effect
-const nav = document.querySelector('.nav');
-let lastScroll = 0;
+let articlesData = null;
+let allArticles = [];
 
-window.addEventListener('scroll', () => {
-  const currentScroll = window.pageYOffset;
-  
-  if (currentScroll > 50) {
-    nav.classList.add('scrolled');
-  } else {
-    nav.classList.remove('scrolled');
+// Load articles from JSON
+async function loadArticles() {
+  try {
+    const response = await fetch('data/articles.json');
+    articlesData = await response.json();
+    
+    // Combine featured and articles
+    allArticles = [articlesData.featured, ...articlesData.articles];
+    
+    // Update stats
+    document.getElementById('total-articles').textContent = allArticles.length;
+    
+    // Update filter counts
+    updateFilterCounts();
+    
+    // Render articles
+    renderFeatured(articlesData.featured);
+    renderArticles(articlesData.articles);
+    
+    // Hide loading
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('featured').style.display = 'grid';
+    
+  } catch (error) {
+    console.error('Error loading articles:', error);
+    document.getElementById('loading').innerHTML = `
+      <p>Artikel konnten nicht geladen werden.</p>
+      <p style="font-size: 0.85rem; margin-top: 0.5rem;">Bitte stelle sicher, dass die Seite von einem Server geladen wird.</p>
+    `;
   }
+}
+
+// Update filter counts
+function updateFilterCounts() {
+  const counts = { all: allArticles.length };
   
-  lastScroll = currentScroll;
-});
-
-// Filter functionality
-const filterChips = document.querySelectorAll('.filter-chip');
-const articles = document.querySelectorAll('.article-card, .featured-article');
-const articleCount = document.getElementById('article-count');
-
-filterChips.forEach(chip => {
-  chip.addEventListener('click', () => {
-    filterChips.forEach(c => c.classList.remove('active'));
-    chip.classList.add('active');
-    
-    const filter = chip.dataset.filter;
-    let visibleCount = 0;
-    
-    articles.forEach(article => {
-      const category = article.dataset.category;
-      const shouldShow = filter === 'all' || category === filter;
-      
-      if (shouldShow) {
-        article.style.display = '';
-        article.style.opacity = '0';
-        article.style.transform = 'translateY(20px)';
-        
-        setTimeout(() => {
-          article.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-          article.style.opacity = '1';
-          article.style.transform = 'translateY(0)';
-        }, 50);
-        
-        visibleCount++;
-      } else {
-        article.style.opacity = '0';
-        article.style.transform = 'translateY(20px)';
-        
-        setTimeout(() => {
-          article.style.display = 'none';
-        }, 400);
-      }
-    });
-    
-    setTimeout(() => {
-      articleCount.textContent = visibleCount;
-    }, 200);
+  allArticles.forEach(article => {
+    counts[article.category] = (counts[article.category] || 0) + 1;
   });
-});
-
-// Modal functionality
-const modal = document.getElementById('article-modal');
-const modalClose = document.getElementById('modal-close');
-
-function openArticle(articleKey) {
-  const data = articlesData[articleKey];
-  if (!data) return;
   
-  // Populate modal
-  document.getElementById('modal-image').src = data.image;
-  document.getElementById('modal-category').textContent = data.category;
-  document.getElementById('modal-title').textContent = data.title;
-  document.getElementById('modal-avatar').textContent = data.avatar;
-  document.getElementById('modal-author').textContent = data.author;
-  document.getElementById('modal-date').textContent = data.date;
-  document.getElementById('modal-reading-time').textContent = data.readTime;
-  document.getElementById('modal-body').innerHTML = data.content;
+  document.getElementById('count-all').textContent = ` (${counts.all})`;
+  document.getElementById('count-ai').textContent = ` (${counts.ai || 0})`;
+  document.getElementById('count-creator').textContent = ` (${counts.creator || 0})`;
+  document.getElementById('count-hospitality').textContent = ` (${counts.hospitality || 0})`;
+  document.getElementById('count-strategy').textContent = ` (${counts.strategy || 0})`;
+  document.getElementById('count-case-study').textContent = ` (${counts['case-study'] || 0})`;
+}
+
+// Render featured article
+function renderFeatured(article) {
+  const colors = categoryColors[article.category] || categoryColors.ai;
+  const icon = categoryIcons[article.category] || '◈';
   
-  // Tags
+  document.getElementById('featured').innerHTML = `
+    <div class="featured-image">
+      <div class="featured-image-bg" style="background: linear-gradient(135deg, ${colors[0]}22, ${colors[1]}11);">
+        <span class="featured-image-icon">${icon}</span>
+      </div>
+      <span class="featured-badge">Featured</span>
+    </div>
+    <div class="featured-content">
+      <div class="featured-meta">
+        <span class="featured-category">${article.categoryLabel}</span>
+        <span>${article.dateLabel}</span>
+        <span>${article.readTime}</span>
+      </div>
+      <h2 class="featured-title">${article.title}</h2>
+      <p class="featured-excerpt">${article.excerpt}</p>
+      <div class="featured-author">
+        <div class="featured-avatar">${article.authorInitials}</div>
+        <div>
+          <div class="featured-author-name">${article.author}</div>
+          <div class="featured-author-role">${article.authorRole || 'LEVERAGE Editorial'}</div>
+        </div>
+      </div>
+    </div>
+  `;
+  
+  document.getElementById('featured').dataset.articleId = article.id;
+  document.getElementById('featured').addEventListener('click', () => openModal(article));
+}
+
+// Render article cards
+function renderArticles(articles) {
+  const grid = document.getElementById('articles-grid');
+  
+  grid.innerHTML = articles.map(article => {
+    const colors = categoryColors[article.category] || categoryColors.ai;
+    const icon = categoryIcons[article.category] || '◈';
+    
+    return `
+      <article class="article-card" data-category="${article.category}" data-id="${article.id}">
+        <div class="article-card-image" style="background: linear-gradient(135deg, ${colors[0]}22, ${colors[1]}11);">
+          <span class="article-card-icon">${icon}</span>
+          <span class="article-card-category">${article.categoryLabel}</span>
+        </div>
+        <div class="article-card-content">
+          <div class="article-card-meta">
+            <span>${article.dateLabel}</span>
+            <span>•</span>
+            <span>${article.readTime}</span>
+          </div>
+          <h3 class="article-card-title">${article.title}</h3>
+          <p class="article-card-excerpt">${article.excerpt}</p>
+          <div class="article-card-footer">
+            <div class="article-card-author">
+              <div class="article-card-avatar">${article.authorInitials}</div>
+              <span class="article-card-author-name">${article.author}</span>
+            </div>
+            <span class="article-card-read-time">${article.readTime}</span>
+          </div>
+        </div>
+      </article>
+    `;
+  }).join('');
+  
+  // Add click handlers
+  grid.querySelectorAll('.article-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const articleId = card.dataset.id;
+      const article = allArticles.find(a => a.id === articleId);
+      if (article) openModal(article);
+    });
+  });
+}
+
+// Modal functions
+function openModal(article) {
+  document.getElementById('modal-category').textContent = article.categoryLabel;
+  document.getElementById('modal-title').textContent = article.title;
+  document.getElementById('modal-avatar').textContent = article.authorInitials;
+  document.getElementById('modal-author').textContent = article.author;
+  document.getElementById('modal-date').textContent = article.dateLabel;
+  document.getElementById('modal-read-time').textContent = article.readTime;
+  document.getElementById('modal-body').innerHTML = article.content;
+  
   const tagsContainer = document.getElementById('modal-tags');
-  tagsContainer.innerHTML = data.tags.map(tag => 
-    `<span class="article-modal-tag">${tag}</span>`
+  tagsContainer.innerHTML = (article.tags || []).map(tag => 
+    `<span class="modal-tag">${tag}</span>`
   ).join('');
   
-  // Show modal
-  modal.classList.add('active');
-  document.body.classList.add('modal-open');
-  
-  // Scroll modal to top
-  modal.scrollTop = 0;
+  document.getElementById('modal').classList.add('active');
+  document.body.style.overflow = 'hidden';
 }
 
 function closeModal() {
-  modal.classList.remove('active');
-  document.body.classList.remove('modal-open');
+  document.getElementById('modal').classList.remove('active');
+  document.body.style.overflow = '';
 }
 
-modalClose.addEventListener('click', closeModal);
-
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    closeModal();
-  }
+document.getElementById('modal-close').addEventListener('click', closeModal);
+document.getElementById('modal').addEventListener('click', e => {
+  if (e.target.id === 'modal') closeModal();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
 });
 
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && modal.classList.contains('active')) {
-    closeModal();
-  }
-});
-
-// Add click handlers to articles
-const featuredArticle = document.querySelector('.featured-article');
-if (featuredArticle) {
-  featuredArticle.style.cursor = 'pointer';
-  featuredArticle.addEventListener('click', () => openArticle('featured-ai'));
-}
-
-const articleCards = document.querySelectorAll('.article-card');
-articleCards.forEach((card, index) => {
-  const keys = Object.keys(articlesData).filter(k => k !== 'featured-ai');
-  card.addEventListener('click', () => openArticle(keys[index]));
-});
-
-// Intersection Observer for animations
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, observerOptions);
-
-document.querySelectorAll('.fade-in, .stagger-children').forEach(el => {
-  observer.observe(el);
-});
-
-// Newsletter form
-document.getElementById('newsletter-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const button = this.querySelector('.newsletter-button');
-  const originalText = button.textContent;
-  
-  button.textContent = '✓ Angemeldet!';
-  button.style.background = 'linear-gradient(135deg, #00d4aa 0%, #00a888 100%)';
-  
-  setTimeout(() => {
-    button.textContent = originalText;
-    button.style.background = '';
-    this.reset();
-  }, 3000);
-});
-
-// Topic cards click handler
-document.querySelectorAll('.topic-card').forEach(card => {
-  card.addEventListener('click', function(e) {
-    e.preventDefault();
-    const topic = this.dataset.topic;
+// Filter functionality
+document.querySelectorAll('.filter-chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
     
-    const matchingFilter = document.querySelector(`.filter-chip[data-filter="${topic}"]`);
-    if (matchingFilter) {
-      matchingFilter.click();
-      
-      document.querySelector('.filters-section').scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
+    const filter = chip.dataset.filter;
+    const featured = document.getElementById('featured');
+    const cards = document.querySelectorAll('.article-card');
+    
+    // Filter featured
+    if (filter === 'all' || articlesData.featured.category === filter) {
+      featured.style.display = 'grid';
+    } else {
+      featured.style.display = 'none';
     }
+    
+    // Filter cards
+    cards.forEach(card => {
+      if (filter === 'all' || card.dataset.category === filter) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
   });
 });
 
-// Load more button
-const loadMoreBtn = document.getElementById('load-more');
-loadMoreBtn.addEventListener('click', function() {
-  this.classList.add('loading');
-  this.querySelector('span').textContent = 'Lädt...';
-  
-  setTimeout(() => {
-    this.classList.remove('loading');
-    this.classList.add('done');
-    this.querySelector('span').textContent = 'Alle Artikel geladen';
-  }, 1000);
+// Navigation scroll effect
+window.addEventListener('scroll', () => {
+  document.querySelector('.nav').classList.toggle('scrolled', window.scrollY > 50);
 });
 
-// Initial animation trigger
-setTimeout(() => {
-  document.querySelectorAll('.fade-in, .stagger-children').forEach(el => {
-    if (el.getBoundingClientRect().top < window.innerHeight) {
-      el.classList.add('visible');
-    }
-  });
-}, 100);
-
-// Update article count
-articleCount.textContent = articles.length;
-
-console.log('✨ LEVERAGE STRATEGIES Insights loaded with full article content');
+// Load articles on page load
+loadArticles();
 </script>
 
 </body>
