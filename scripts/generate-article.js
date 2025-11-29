@@ -58,7 +58,7 @@ async function generateArticle(category, existingTitles) {
   const response = await openai.chat.completions.create({
     model: CONFIG.model,
     messages: [
-      { role: 'system', content: `Du bist Content Strategist bei LEVERAGE STRATEGIES. Schreibe professionell, datengetrieben, auf Deutsch mit englischen Fachbegriffen. Zielgruppe: C-Level und Marketing-Entscheider DACH.` },
+      { role: 'system', content: 'Du bist Content Strategist bei LEVERAGE STRATEGIES. Schreibe professionell, datengetrieben, auf Deutsch mit englischen Fachbegriffen. Zielgruppe: C-Level und Marketing-Entscheider DACH.' },
       { role: 'user', content: `Generiere einen Insight-Artikel für "${category.label}". Vermeide diese Titel: ${existingTitles.slice(0,5).join(', ')}. Antworte als JSON: {"title":"...","excerpt":"...","content":"<p>...</p><h2>...</h2>...","tags":["..."],"readTime":"X Min."}` }
     ],
     temperature: 0.8,
@@ -67,8 +67,8 @@ async function generateArticle(category, existingTitles) {
   });
 
   const data = JSON.parse(response.choices[0].message.content);
-  const id = data.title.toLowerCase().replace(/[äöü]/g,m=>({ä:'ae',ö:'oe',ü:'ue'}[m])).replace(/[^a-z0-9]+/g,'-').substring(0,40);
-
+  const id = data.title.toLowerCase().replace(/[äöü]/g, m => ({ä:'ae',ö:'oe',ü:'ue'}[m])).replace(/[^a-z0-9]+/g, '-').substring(0, 40);
+  
   return {
     id: `${id}-${Date.now()}`,
     category: category.id,
@@ -89,18 +89,18 @@ async function main() {
   const allArticles = [data.featured, ...data.articles];
   const category = selectCategory(allArticles);
   
-  console.log(`📂 Kategorie: ${category.label}`);
+  console.log('📂 Kategorie: ' + category.label);
   
   const article = await generateArticle(category, allArticles.map(a => a.title));
   
-  console.log(`📝 Titel: ${article.title}`);
-  console.log(`✅ Status: PENDING\n`);
+  console.log('📝 Titel: ' + article.title);
+  console.log('✅ Status: PENDING\n');
   
   if (data.articles.length >= CONFIG.maxArticles) {
     const archived = data.articles.pop();
     data.archived = data.archived || [];
     data.archived.push(archived);
-    console.log(`📦 Archiviert: ${archived.title}`);
+    console.log('📦 Archiviert: ' + archived.title);
   }
   
   data.pending = data.pending || [];
