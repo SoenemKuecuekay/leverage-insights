@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "lastGenerated": "2025-11-29",
+    "totalArticles": 12,
+    "maxArticles": 18,
+    "categories": ["ai", "creator", "hospitality", "strategy", "case-study"]
+  },
+  "featured": {
+    "id": "featured-ai-enterprise-2025",
+    "category": "ai",
+    "categoryLabel": "AI & Automation",
+    "title": "Claude, Copilot & Co: Wie Enterprise AI 2025 Workflows revolutioniert",
+    "excerpt": "Von Code-Generierung bis Dokumentenanalyse – AI-Assistenten transformieren die Arbeitswelt. Wir analysieren, welche Tools wirklich Produktivität steigern und wie Unternehmen sie strategisch einsetzen sollten.",
+    "content": "<p>Die Integration von AI-Assistenten in Unternehmensworkflows hat 2025 einen Wendepunkt erreicht. Was vor zwei Jahren noch als experimentelle Technologie galt, ist heute fester Bestandteil produktiver Arbeitsumgebungen.</p><h2>Der aktuelle Stand der Enterprise AI</h2><p>Claude von Anthropic, Microsoft Copilot und Google Gemini dominieren den Markt für Enterprise-AI. Jede Plattform hat ihre Stärken: Claude überzeugt bei komplexen Analysen und Code-Generierung, Copilot integriert sich nahtlos in die Microsoft-Welt, und Gemini punktet mit multimodalen Fähigkeiten.</p><blockquote>„Die Frage ist nicht mehr ob AI, sondern wie AI strategisch eingesetzt wird, um Wettbewerbsvorteile zu schaffen."</blockquote><h2>Messbare Produktivitätssteigerungen</h2><p>Unsere Analysen zeigen konkrete Verbesserungen: <strong>60-70% Zeitersparnis</strong> bei Dokumentenerstellung, <strong>40% schnellere</strong> Code Reviews, und komplexe Datenanalysen in Minuten statt Stunden.</p>",
+    "author": "LEVERAGE Editorial",
+    "authorInitials": "LS",
+    "authorRole": "Strategy & Insights",
+    "date": "2025-11",
+    "dateLabel": "November 2025",
+    "readTime": "8 Min.",
+    "tags": ["AI", "Enterprise", "Produktivität", "Workflow Automation"],
+    "status": "published"
+  },
+  "articles": [
+    {
+      "id": "creator-monetization-2025",
+      "category": "creator",
+      "categoryLabel": "Creator Economy",
+      "title": "Creator Monetarisierung 2025: Jenseits von Sponsorings",
+      "excerpt": "Subscriptions, Digital Products, Community Memberships – die Revenue-Streams erfolgreicher Creator werden immer diversifizierter.",
+      "content": "<p>Die Creator Economy hat sich fundamental gewandelt.</p><h2>Die neuen Säulen der Creator-Einnahmen</h2><ul><li><strong>Digital Products:</strong> E-Books, Kurse, Templates</li><li><strong>Membership Communities:</strong> Exklusive Inhalte und Zugang</li><li><strong>Services:</strong> Consulting, Coaching</li></ul>",
+      "author": "M. Krause",
+      "authorInitials": "MK",
+      "date": "2025-11",
+      "dateLabel": "November 2025",
+      "readTime": "5 Min.",
+      "tags": ["Creator Economy", "Monetarisierung", "Digital Products"],
+      "status": "published"
+    },
+    {
+      "id": "direct-booking-revolution",
+      "category": "hospitality",
+      "categoryLabel": "Hospitality",
+      "title": "Direct Booking Revolution: Wie Hotels OTA-Abhängigkeit reduzieren",
+      "excerpt": "Mit gezielten Landing Pages und Performance Marketing gewinnen Luxushotels die Kontrolle über ihre Buchungen zurück.",
+      "content": "<p>Die Abhängigkeit von Booking.com und Expedia kostet Hotels 15-25% Provision pro Buchung.</p><h2>Die Direct-Booking-Strategie</h2><p><strong>1. Conversion-optimierte Landing Pages</strong></p><p><strong>2. Retargeting-Kampagnen</strong></p><p><strong>3. Best-Price-Garantie</strong></p>",
+      "author": "LS Editorial",
+      "authorInitials": "LS",
+      "date": "2025-10",
+      "dateLabel": "Oktober 2025",
+      "readTime": "6 Min.",
+      "tags": ["Hospitality", "Direct Booking", "Hotels"],
+      "status": "published"
+    },
+    {
+      "id": "digital-roi-kpis",
+      "category": "strategy",
+      "categoryLabel": "Strategy",
+      "title": "Digital ROI messen: KPIs die wirklich zählen",
+      "excerpt": "Vanity Metrics vs. Business Impact – ein Framework für aussagekräftige Digital Marketing Metriken.",
+      "content": "<p>Viele Unternehmen investieren erheblich in digitales Marketing, können aber den tatsächlichen Business Impact nicht beziffern.</p>",
+      "author": "T. Berger",
+      "authorInitials": "TB",
+      "date": "2025-10",
+      "dateLabel": "Oktober 2025",
+      "readTime": "7 Min.",
+      "tags": ["Digital Strategy", "Analytics", "ROI"],
+      "status": "published"
+    },
+    {
+      "id": "seehotel-leoni-case",
+      "category": "case-study",
+      "categoryLabel": "Case Study",
+      "title": "+340% Direct Bookings: Seehotel Leoni Transformation",
+      "excerpt": "Wie eine gezielte Landing Page Strategie die Direct Booking Rate eines Boutique Hotels vervierfachte.",
+      "content": "<p>Das Seehotel Leoni stand vor einer klassischen Herausforderung: Über 75% der Buchungen kamen über OTAs.</p><h2>Die Ergebnisse</h2><ul><li><strong>Direct Booking Rate:</strong> 22% → 68%</li><li><strong>Eingesparte Provisionen:</strong> ~€180.000 p.a.</li></ul>",
+      "author": "LS Editorial",
+      "authorInitials": "LS",
+      "date": "2025-09",
+      "dateLabel": "September 2025",
+      "readTime": "4 Min.",
+      "tags": ["Case Study", "Hospitality", "Direct Booking"],
+      "status": "published"
+    },
+    {
+      "id": "ai-content-production",
+      "category": "ai",
+      "categoryLabel": "AI & Automation",
+      "title": "AI-gestützte Content Produktion: Effizienz ohne Qualitätsverlust",
+      "excerpt": "Der strategische Einsatz von generativer AI in Content Workflows – Best Practices und Pitfalls.",
+      "content": "<p>AI-Tools können Content-Produktion dramatisch beschleunigen.</p><h2>Wo AI wirklich hilft</h2><ul><li><strong>Erste Entwürfe</strong></li><li><strong>Variationen</strong></li><li><strong>SEO-Optimierung</strong></li></ul>",
+      "author": "J. Weber",
+      "authorInitials": "JW",
+      "date": "2025-09",
+      "dateLabel": "September 2025",
+      "readTime": "6 Min.",
+      "tags": ["AI", "Content", "Marketing"],
+      "status": "published"
+    }
+  ],
+  "pending": [],
+  "archived": []
+}
