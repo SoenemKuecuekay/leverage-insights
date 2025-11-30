@@ -1,0 +1,53 @@
+name: ✅ Artikel Freigeben
+
+on:
+  workflow_dispatch:
+    inputs:
+      make_featured:
+        description: 'Als Featured Artikel setzen?'
+        required: true
+        default: 'no'
+        type: choice
+        options:
+          - 'no'
+          - 'yes'
+
+jobs:
+  approve:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Approve latest pending article
+        run: |
+          node -e "
+          const fs = require('fs');
+          const data = JSON.parse(fs.readFileSync('data/articles.json', 'utf8'));
+          
+          if (!data.pending || data.pending.length === 0) {
+            console.log('Keine Artikel in pending!');
+            process.exit(0);
+          }
+          
+          const article = data.pending.shift();
+          article.status = 'published';
+          
+          const makeFeatured = '${{ github.event.inputs.make_featured }}' === 'yes';
+          
+          if (makeFeatured && data.featured) {
+            data.articles.unshift(data.featured);
+            data.featured = article;
+          } else {
+            data.articles.unshift(article);
+          }
+          
+          fs.writeFileSync('data/articles.json', JSON.stringify(data, null, 2));
+          "
+          
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/articles.json
+          git commit -m "✅ Artikel freigegeben"
+          git push
