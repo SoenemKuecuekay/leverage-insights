@@ -16,16 +16,17 @@ jobs:
   approve:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
       
-      - name: Approve latest pending article
+      - name: Approve Pending Article
         run: |
           node -e "
           const fs = require('fs');
           const data = JSON.parse(fs.readFileSync('data/articles.json', 'utf8'));
           
           if (!data.pending || data.pending.length === 0) {
-            console.log('Keine Artikel in pending!');
+            console.log('❌ Keine Artikel in pending!');
             process.exit(0);
           }
           
@@ -34,17 +35,25 @@ jobs:
           
           const makeFeatured = '${{ github.event.inputs.make_featured }}' === 'yes';
           
-          if (makeFeatured && data.featured) {
-            data.articles.unshift(data.featured);
+          if (makeFeatured) {
+            if (data.featured) {
+              data.articles.unshift(data.featured);
+              console.log('📦 Alter Featured verschoben: ' + data.featured.title);
+            }
             data.featured = article;
+            console.log('⭐ Neuer Featured Artikel: ' + article.title);
           } else {
             data.articles.unshift(article);
+            console.log('✅ Artikel freigegeben: ' + article.title);
           }
           
-          fs.writeFileSync('data/articles.json', JSON.stringify(data, null, 2));
-          "
+          data.meta.totalArticles = 1 + data.articles.length;
           
-      - name: Commit changes
+          fs.writeFileSync('data/articles.json', JSON.stringify(data, null, 2));
+          console.log('💾 articles.json gespeichert');
+          "
+      
+      - name: Commit Changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
