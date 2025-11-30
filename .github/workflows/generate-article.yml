@@ -48,8 +48,31 @@ jobs:
           subject: "📝 Neuer LEVERAGE Insight zur Freigabe"
           to: d.kuecuekay@extra-group.com
           from: d.kuecuekay@extra-group.com
-          body: |
-            Ein neuer Artikel wurde generiert.
-            
-            Prüfen: https://github.com/${{ github.repository }}/blob/main/data/articles.json
+          html_body: |
+            <div style="font-family: Arial, sans-serif; max-width: 500px; margin: 0 auto; padding: 20px;">
+              <h2 style="color: #00C896; margin-bottom: 20px;">🆕 Neuer Artikel generiert</h2>
+              
+              <p style="color: #333; font-size: 16px; line-height: 1.6;">
+                Ein neuer Insight-Artikel wartet auf deine Freigabe.
+              </p>
+              
+              <div style="margin: 30px 0;">
+                <a href="https://github.com/${{ github.repository }}/actions/workflows/approve-article.yml" 
+                   style="background: #00C896; color: white; padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block;">
+                  ✅ Artikel Freigeben
+                </a>
+              </div>
+              
+              <p style="color: #666; font-size: 14px;">
+                <a href="https://github.com/${{ github.repository }}/blob/main/data/articles.json" style="color: #4B7BF5;">
+                  📄 Artikel vorher ansehen
+                </a>
+              </p>
+              
+              <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;">
+              
+              <p style="color: #999; font-size: 12px;">
+                LEVERAGE STRATEGIES - Automated Insights System
+              </p>
+            </div>
         continue-on-error: true
